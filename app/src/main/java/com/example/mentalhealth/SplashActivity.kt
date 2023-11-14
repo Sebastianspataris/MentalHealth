@@ -15,9 +15,10 @@ class SplashActivity : AppCompatActivity() {
 
         // Usar un Handler para ejecutar un código después de un tiempo de espera
         Handler().postDelayed({
-            // Iniciar la actividad principal después del tiempo de espera
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
+
+
 
             // Cerrar la actividad de Splash
             finish()
