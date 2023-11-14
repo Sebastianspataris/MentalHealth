@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">mentalhealth</string>
+    <string name="app_name">MentalHealth</string>
+    <string name="title_activity_login">Login Activity</string>
 </resources>
