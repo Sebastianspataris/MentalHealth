@@ -1,4 +1,4 @@
-package com.example.mentalhealth
+package com.example.mentalhealth.activities
 
 import android.os.Bundle
 import android.widget.Button

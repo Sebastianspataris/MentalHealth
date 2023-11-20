@@ -1,10 +1,11 @@
-package com.example.mentalhealth
+package com.example.mentalhealth.activities
 
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
+import com.example.mentalhealth.R
 
 
 class LoginActivity : AppCompatActivity() {
@@ -34,8 +35,7 @@ class LoginActivity : AppCompatActivity() {
             // Tu lógica de inicio de sesión aquí...
 
             // Después de realizar el inicio de sesión, puedes abrir la MainActivity
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
+
             finish()
 
         }
@@ -47,8 +47,6 @@ class LoginActivity : AppCompatActivity() {
 
             if (enteredUsername.isNotEmpty() && enteredPassword.isNotEmpty()) {
 
-                val intent = Intent(this, MainActivity::class.java)
-                startActivity(intent)
                 finish()
             } else {
 
