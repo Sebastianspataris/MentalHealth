@@ -20,7 +20,7 @@
         android:id="@+id/editTextUsername"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:hint="Nombre de usuario"
+        android:hint="Correo electrónico"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
         android:padding="10dp"

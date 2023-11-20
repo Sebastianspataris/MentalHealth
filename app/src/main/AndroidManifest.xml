@@ -21,13 +21,9 @@
             </intent-filter>
 
         </activity>
-        <activity android:name=".RegistroActivity" />
-        <activity android:name=".LoginActivity" />
-
-
-
-
-
+        <activity android:name=".activities.RegistroActivity" />
+        <activity android:name=".activities.LoginActivity" />
+        <activity android:name=".activities.HomeActivity" />
 
     </application>
 
