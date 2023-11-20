@@ -24,34 +24,29 @@ class LoginActivity : AppCompatActivity() {
         editTextPassword = findViewById(R.id.editTextPassword)
         btnLogin = findViewById(R.id.btnLogin)
         btnGoToRegister = findViewById(R.id.btnGoToRegister)
+    }
 
+    override fun onStart() {
+        super.onStart()
+        setButtonsListener()
+    }
+
+    private fun setButtonsListener() {
         btnGoToRegister.setOnClickListener {
             // Cuando se hace clic en el botón de registro, abre la actividad de registro
             val intent = Intent(this, RegistroActivity::class.java)
             startActivity(intent)
-
-
-        btnLogin.setOnClickListener {
-            // Tu lógica de inicio de sesión aquí...
-
-            // Después de realizar el inicio de sesión, puedes abrir la MainActivity
-
-            finish()
-
         }
-
 
         btnLogin.setOnClickListener {
             val enteredUsername = editTextUsername.text.toString()
             val enteredPassword = editTextPassword.text.toString()
 
             if (enteredUsername.isNotEmpty() && enteredPassword.isNotEmpty()) {
-
+                val intent = Intent(this, HomeActivity::class.java)
+                startActivity(intent)
                 finish()
-            } else {
-
             }
         }
     }
-}
 }
