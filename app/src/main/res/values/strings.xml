@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">MentalHealth</string>
     <string name="title_activity_login">Login Activity</string>
+    <string name="open_drawer">abrir</string>
+    <string name="close_drawer">cerrar</string>
+    <string name="user_avatar_description">Mentalhealth</string>
 </resources>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_item1"
+        android:title="Perfil" />
+    <item
+        android:id="@+id/nav_item2"
+        android:title="Agenda" />
+    <item
+        android:id="@+id/nav_item3"
+        android:title="Informacion sobre problems de salud mental" />
+    <item
+        android:id="@+id/nav_item4"
+        android:title="Medicos Cercanos" />
+    <item
+        android:id="@+id/nav_item5"
+        android:title="Efectos secundarios de medicamentos" />
+
+    <item
+        android:id="@+id/nav_item6"
+        android:title="Soporte" />
+</menu>
