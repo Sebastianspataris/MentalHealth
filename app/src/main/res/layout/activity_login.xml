@@ -38,6 +38,13 @@
         android:layout_centerHorizontal="true"
         android:padding="10dp"
         android:background="#FFFFFF" />
+    <TextView
+        android:id="@+id/textlg"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"
+        android:text="Si no recuerdas tu cuenta haz click AQUI"
+         android:layout_below="@id/editTextPassword"/>
 
     <Button
         android:id="@+id/btnLogin"

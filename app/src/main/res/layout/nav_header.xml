@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- res/layout/nav_header.xml -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="bottom"
+    android:padding="16dp"
+    android:background="@color/colorPrimary">
+
+    <!-- Aquí puedes personalizar el contenido del encabezado -->
+    <ImageView
+        android:layout_width="243dp"
+        android:layout_height="175dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/logo" />
+
+</LinearLayout>
