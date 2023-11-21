@@ -3,8 +3,8 @@
     <item
         android:id="@+id/page_1"
         android:enabled="true"
-        android:icon="@drawable/smile"
-        android:title="Consejos emociones"/>
+        android:icon="@drawable/bienestar"
+        android:title="Consejos bienestar"/>
     <item
         android:id="@+id/page_2"
         android:enabled="true"
@@ -18,8 +18,8 @@
     <item
         android:id="@+id/page_4"
         android:enabled="true"
-        android:icon="@drawable/bienestar"
-        android:title="Consejo bienestar"/>
+        android:icon="@drawable/smile"
+        android:title="Consejo para emociones"/>
     <item
         android:id="@+id/page_5"
         android:enabled="true"

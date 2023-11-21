@@ -70,11 +70,11 @@ class HomeActivity : AppCompatActivity() {
     private fun handleNavigationItemSelected(itemId: Int): Boolean {
         when (itemId) {
             R.id.nav_item1 -> {
-                exampleText.text = "Seleccionaste Opción 1"
+                exampleText.text = ""
                 return true
             }
             R.id.nav_item2 -> {
-                exampleText.text = "Seleccionaste Opción 2"
+                exampleText.text = ""
                 return true
             }
             // Agrega más casos según sea necesario
@@ -86,11 +86,11 @@ class HomeActivity : AppCompatActivity() {
     private fun handleBottomNavigationItemSelected(itemId: Int): Boolean {
         when (itemId) {
             R.id.page_1 -> {
-                exampleText.text = "Estamos en MONITOREO"
+                exampleText.text = ""
                 return true
             }
             R.id.page_2, R.id.page_3, R.id.page_4, R.id.page_5 -> {
-                exampleText.text = "Estamos en NOTAS"
+                exampleText.text = ""
                 return true
             }
             else -> return false
