@@ -21,38 +21,38 @@
         android:id="@+id/textViewTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_below="@id/imageView"
+
         android:layout_centerHorizontal="true"
 
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="145dp"
         android:layout_marginTop="150dp"
         android:text="Registro"
-        android:textSize="45sp"
-        ></TextView>
+        android:textSize="36sp"></TextView>
 
     <EditText
         android:id="@+id/editTextFirstName"
-        android:layout_width="match_parent"
+        android:layout_width="326dp"
         android:layout_height="wrap_content"
-        android:hint="Nombre"
         android:layout_below="@id/textViewTitle"
-        android:layout_marginTop="16dp"
         android:layout_marginHorizontal="16dp"
-        android:background="#FFFFFF"/>
+        android:layout_marginTop="16dp"
+        android:background="#FFFFFF"
+        android:hint="Nombre" />
 
     <EditText
         android:id="@+id/editTextLastName"
-        android:layout_width="match_parent"
+        android:layout_width="326dp"
         android:layout_height="wrap_content"
-        android:hint="Apellido"
         android:layout_below="@id/editTextFirstName"
-        android:layout_marginTop="8dp"
         android:layout_marginHorizontal="16dp"
-        android:background="#FFFFFF"/>
+        android:layout_marginTop="8dp"
+        android:background="#FFFFFF"
+        android:hint="Apellido" />
 
     <EditText
         android:id="@+id/editTextEmail"
-        android:layout_width="match_parent"
+        android:layout_width="326dp"
         android:layout_height="wrap_content"
         android:hint="Correo Electrónico"
         android:inputType="textEmailAddress"
@@ -63,7 +63,7 @@
 
     <EditText
         android:id="@+id/editTextDOB"
-        android:layout_width="match_parent"
+        android:layout_width="326dp"
         android:layout_height="wrap_content"
         android:hint="Fecha de Nacimiento"
         android:focusable="false"
@@ -76,7 +76,7 @@
 
     <EditText
         android:id="@+id/editDiagnosis"
-        android:layout_width="match_parent"
+        android:layout_width="326dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/editTextDOB"
         android:hint="Diagnostico medico"
@@ -86,7 +86,7 @@
 
     <Button
         android:id="@+id/buttonRegister"
-        android:layout_width="match_parent"
+        android:layout_width="326dp"
         android:layout_height="wrap_content"
         android:text="Registrarse"
         android:layout_below="@id/editDiagnosis"

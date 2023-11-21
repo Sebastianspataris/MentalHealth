@@ -25,15 +25,29 @@ class HomeActivity : AppCompatActivity() {
                 R.id.page_1 -> {
                     //Aca cuando seleccionas Monitorar
                     exampleText.text = " Estamos en MONITOREO"
-                    Toast.makeText(this, "Vamos a monitorear!", Toast.LENGTH_SHORT).show()
                     true
                 }
                 R.id.page_2 -> {
                     //Aca cuando seleccionas Notas
                     exampleText.text = " Estamos en NOTAS"
-                    Toast.makeText(this, "Vamos a Ir a Notas!", Toast.LENGTH_SHORT).show()
                     true
                 }
+                R.id.page_3 -> {
+                    //Aca cuando seleccionas Notas
+                    exampleText.text = " Estamos en NOTAS"
+                    true
+                }
+                R.id.page_4 -> {
+                    //Aca cuando seleccionas Notas
+                    exampleText.text = " Estamos en NOTAS"
+                    true
+                }
+                R.id.page_5 -> {
+                    //Aca cuando seleccionas Notas
+                    exampleText.text = " Estamos en NOTAS"
+                    true
+                }
+
                 else -> false
             }
         }
