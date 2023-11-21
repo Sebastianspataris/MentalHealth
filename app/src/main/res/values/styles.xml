@@ -6,8 +6,8 @@
     <style name="AppTheme.NoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Configuraciones adicionales si es necesario -->
 
-    <item name="colorPrimary">@color/colorPrimary</item>
-    <item name="colorPrimaryDark">@color/darkgreen</item>
+    <item name="colorPrimary">@color/darkgreen</item>
+    <item name="colorPrimaryDark">@color/colorPrimary</item>
     <item name="colorAccent">@color/colorAccent</item>
 </style>
 
@@ -16,8 +16,8 @@
         <item name="android:windowBackground">@drawable/splash_background</item>
     </style>
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/darkgreen</item>
+        <item name="colorPrimary">@color/darkgreen</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
 
 
         <item name="android:homeAsUpIndicator">@drawable/ic_menu</item>
