@@ -3,11 +3,26 @@
     <item
         android:id="@+id/page_1"
         android:enabled="true"
-        android:icon="@drawable/ic_heart_monitor_c4"
-        android:title="Monitorear"/>
+        android:icon="@drawable/smile"
+        android:title="Consejos emociones"/>
     <item
         android:id="@+id/page_2"
         android:enabled="true"
         android:icon="@drawable/ic_edit_24"
-        android:title="Notas"/>
+        android:title="Diario de emociones"/>
+    <item
+        android:id="@+id/page_3"
+        android:enabled="true"
+        android:icon="@drawable/sun"
+        android:title="Mindfulness"/>
+    <item
+        android:id="@+id/page_4"
+        android:enabled="true"
+        android:icon="@drawable/bienestar"
+        android:title="Consejo bienestar"/>
+    <item
+        android:id="@+id/page_5"
+        android:enabled="true"
+        android:icon="@drawable/ic_menu"
+        android:title="menu"/>
 </menu>
