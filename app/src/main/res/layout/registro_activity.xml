@@ -71,13 +71,13 @@
         android:layout_marginHorizontal="16dp"
         android:background="#FFFFFF"/>
 
-    <Spinner
-        android:id="@+id/spinnerDiagnosis"
+    <EditText
+        android:id="@+id/editDiagnosis"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/editTextDOB"
+        android:hint="Diagnostico medico"
         android:layout_marginTop="8dp"
-
         android:layout_marginHorizontal="16dp"
         android:background="#FFFFFF"/>
 
@@ -86,9 +86,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Registrarse"
-        android:layout_below="@id/spinnerDiagnosis"
+        android:layout_below="@id/editDiagnosis"
         android:layout_marginTop="16dp"
         android:layout_marginHorizontal="16dp"
-        android:background="#FFFFFF"/>
+        />
 
 </RelativeLayout>
