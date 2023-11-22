@@ -7,11 +7,16 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
+import androidx.fragment.app.Fragment
+import com.example.mentalhealth.BienestarFragment
+import com.example.mentalhealth.DiarioFragment
+import com.example.mentalhealth.MindFragment
 import com.example.mentalhealth.R
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView
 
-class HomeActivity : AppCompatActivity() {
+class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
+
     private lateinit var drawerLayout: DrawerLayout
     private lateinit var navigationView: NavigationView
     private lateinit var bottomNavigation: BottomNavigationView
@@ -25,20 +30,18 @@ class HomeActivity : AppCompatActivity() {
         setupViews()
         setupToolbar()
 
-        // Resto de tu código...
-
         // Habilitar el botón de navegación (hamburguesa)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setDisplayShowHomeEnabled(true)
 
         // Manejar la selección de elementos en el NavigationView
-        navigationView.setNavigationItemSelectedListener {
-            handleNavigationItemSelected(it.itemId)
+        navigationView.setNavigationItemSelectedListener { item ->
+            handleNavigationItemSelected(item.itemId)
         }
 
         // Manejar la selección de elementos en el BottomNavigationView
-        bottomNavigation.setOnItemSelectedListener {
-            handleBottomNavigationItemSelected(it.itemId)
+        bottomNavigation.setOnItemSelectedListener { item ->
+            handleBottomNavigationItemSelected(item.itemId)
         }
     }
 
@@ -69,12 +72,8 @@ class HomeActivity : AppCompatActivity() {
     // Manejar la selección de elementos en el NavigationView
     private fun handleNavigationItemSelected(itemId: Int): Boolean {
         when (itemId) {
-            R.id.nav_item1 -> {
-                exampleText.text = "Seleccionaste Opción 1"
-                return true
-            }
-            R.id.nav_item2 -> {
-                exampleText.text = "Seleccionaste Opción 2"
+            R.id.nav_item1, R.id.nav_item2 -> {
+                exampleText.text = ""
                 return true
             }
             // Agrega más casos según sea necesario
@@ -86,14 +85,46 @@ class HomeActivity : AppCompatActivity() {
     private fun handleBottomNavigationItemSelected(itemId: Int): Boolean {
         when (itemId) {
             R.id.page_1 -> {
-                exampleText.text = "Estamos en MONITOREO"
+                changeFragment(BienestarFragment())
                 return true
             }
-            R.id.page_2, R.id.page_3, R.id.page_4, R.id.page_5 -> {
-                exampleText.text = "Estamos en NOTAS"
+
+            R.id.page_2 -> {
+                changeFragment(DiarioFragment())
                 return true
             }
+
+            R.id.page_3 -> {
+                changeFragment(MindFragment())
+                return true
+            }
+
+            R.id.page_4, R.id.page_5 -> {
+                exampleText.text = ""
+                return true
+            }
+
             else -> return false
         }
+    }
+    override fun onNavigationItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.page_1 -> {
+                changeFragment(BienestarFragment())
+                return true
+            }
+            R.id.page_2 -> {
+                changeFragment(DiarioFragment())
+                return true
+            }
+        }
+        return false
+    }
+
+    fun changeFragment(frag: Fragment) {
+        val fragmentTransaction = supportFragmentManager.beginTransaction()
+        fragmentTransaction.replace(R.id.fragment_container, frag)
+        fragmentTransaction.addToBackStack(null) // Puedes agregar esto si deseas agregar el fragmento a la pila de retroceso
+        fragmentTransaction.commit()
     }
 }
