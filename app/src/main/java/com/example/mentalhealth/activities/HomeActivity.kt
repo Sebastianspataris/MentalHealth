@@ -3,15 +3,19 @@ package com.example.mentalhealth.activities
 import android.os.Bundle
 import android.view.MenuItem
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
+import androidx.fragment.app.Fragment
+import com.example.mentalhealth.BienestarFragment
 import com.example.mentalhealth.R
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView
 
-class HomeActivity : AppCompatActivity() {
+
+class HomeActivity : AppCompatActivity(),NavigationView.OnNavigationItemSelectedListener {
     private lateinit var drawerLayout: DrawerLayout
     private lateinit var navigationView: NavigationView
     private lateinit var bottomNavigation: BottomNavigationView
@@ -25,7 +29,10 @@ class HomeActivity : AppCompatActivity() {
         setupViews()
         setupToolbar()
 
-        // Resto de tu código...
+
+
+
+
 
         // Habilitar el botón de navegación (hamburguesa)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
@@ -39,7 +46,10 @@ class HomeActivity : AppCompatActivity() {
         // Manejar la selección de elementos en el BottomNavigationView
         bottomNavigation.setOnItemSelectedListener {
             handleBottomNavigationItemSelected(it.itemId)
+
+
         }
+
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
@@ -95,5 +105,25 @@ class HomeActivity : AppCompatActivity() {
             }
             else -> return false
         }
+
+    }
+
+    override fun onNavigationItemSelected(item: MenuItem): Boolean {
+
+        when(item.itemId){
+            R.id.page_1 -> {
+                changeFragment(BienestarFragment())
+            }
+            R.id.page_2 -> {
+                changeFragment(DiarioFragment())
+            }
+        }
+
+        return true
+    }
+    fun changeFragment(frag: Fragment){
+        val fragment = supportFragmentManager.beginTransaction()
+        fragment.replace(R.id.fragment_container, frag).commit()
+
     }
 }
