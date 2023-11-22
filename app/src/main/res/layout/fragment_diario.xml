@@ -1,15 +1,57 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<!-- res/layout/fragment_diario.xml -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimaryDark"
-    tools:context=".DiarioFragment">
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".DiarioFragment"
+    android:background="@color/colorAccent">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <EditText
+        android:id="@+id/editTextNota"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="" />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:maxLength="50"
+        android:maxLines="1"
+        android:minLines="1"
+        android:textSize="23dp"
 
-</FrameLayout>
+        android:hint="¿como te sientes?"/>
+
+
+
+    <Button
+        android:id="@+id/buttonGuardar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="120dp"
+        android:text="Guardar" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewResultado"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Notas guardadas:"
+                android:textStyle="bold"
+                android:padding="10dp"
+                android:textSize="18dp"
+                android:lineSpacingExtra="12dp"/>
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
