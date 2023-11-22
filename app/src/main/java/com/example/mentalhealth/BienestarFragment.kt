@@ -1,55 +1,58 @@
 package com.example.mentalhealth
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
+import android.widget.Button
+import android.widget.TextView
+import androidx.fragment.app.Fragment
+import com.example.mentalhealth.R
 
-/**
- * A simple [Fragment] subclass.
- * Use the [BienestarFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class BienestarFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
+    private lateinit var tvTextoAleatorio: TextView
+
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        val rootView = inflater.inflate(R.layout.fragment_bienestar, container, false)
+
+        // Obtén referencias a los elementos de la interfaz de usuario
+        tvTextoAleatorio = rootView.findViewById(R.id.tvTextoAleatorio)
+        val btnMostrarTextoAleatorio: Button = rootView.findViewById(R.id.btnaleatorio)
+
+        // Configura un listener para el clic del botón
+        btnMostrarTextoAleatorio.setOnClickListener {
+            // Muestra un texto aleatorio en el TextView
+            mostrarTextoAleatorio()
         }
+
+        return rootView
     }
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_bienestar, container, false)
-    }
+    private fun mostrarTextoAleatorio() {
+        // Lista de textos aleatorios
+        val textosAleatorios = listOf("Establece Metas Realistas: Define metas alcanzables y realistas para ti mismo." +
+                " Esto te proporcionará un sentido de logro y motivación.",
+            "Cuida de tu Salud Física: Practica hábitos saludables, como una dieta balanceada, ejercicio regular y suficiente descanso. " +
+                    "La salud física está intrínsecamente vinculada al bienestar emocional.",
+            "Prioriza el Autocuidado: Dedica tiempo para cuidarte a ti mismo. Esto puede incluir actividades relajantes como leer," +
+                    " tomar un baño, meditar o practicar hobbies que disfrutes.",
+            "Fomenta Relaciones Positivas: Cultiva relaciones significativas con amigos y familiares. " +
+                    "Las conexiones sociales son fundamentales para el bienestar emocional.", "Gestiona el Estrés: Desarrolla técnicas para gestionar el estrés, como la respiración profunda, la meditación o el yoga." +
+                    " Aprende a identificar y manejar los desencadenantes de estrés." , "Aprende a Decir No: Establece límites saludables y aprende a decir no cuando sea necesario." +
+                    " Esto ayuda a evitar el agotamiento y el sobrecompromiso." , "Desarrolla una Mentalidad Positiva: Practica el pensamiento positivo " +
+                    "y la gratitud. Enfócate en lo positivo incluso en situaciones desafiantes." , "Establece Rutinas Saludables: Mantén rutinas diarias que te brinden estructura y estabilidad. Esto puede incluir horarios " +
+                    "de sueño regulares y una rutina matutina." , "Cultiva el Aprendizaje Continuo: Mantén una mente curiosa y busca oportunidades de aprendizaje continuo. Esto puede ser a través de la lectura," +
+                    " cursos en línea o nuevas experiencias." , "Celebra tus Logros: Reconoce y celebra tus logros, grandes o pequeños." +
+                    " Esto fortalece la autoestima y la sensación de éxito.")
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment BienestarFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic fun newInstance(param1: String, param2: String) =
-                BienestarFragment().apply {
-                    arguments = Bundle().apply {
-                        putString(ARG_PARAM1, param1)
-                        putString(ARG_PARAM2, param2)
-                    }
-                }
+        // Selecciona un texto aleatorio de la lista
+        val textoAleatorio = textosAleatorios.random()
+
+        // Muestra el texto en el TextView
+        tvTextoAleatorio.text = textoAleatorio
     }
 }

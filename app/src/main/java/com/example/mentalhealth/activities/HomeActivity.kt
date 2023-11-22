@@ -3,19 +3,19 @@ package com.example.mentalhealth.activities
 import android.os.Bundle
 import android.view.MenuItem
 import android.widget.TextView
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
 import com.example.mentalhealth.BienestarFragment
+import com.example.mentalhealth.DiarioFragment
 import com.example.mentalhealth.R
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView
 
+class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
-class HomeActivity : AppCompatActivity(),NavigationView.OnNavigationItemSelectedListener {
     private lateinit var drawerLayout: DrawerLayout
     private lateinit var navigationView: NavigationView
     private lateinit var bottomNavigation: BottomNavigationView
@@ -29,27 +29,19 @@ class HomeActivity : AppCompatActivity(),NavigationView.OnNavigationItemSelected
         setupViews()
         setupToolbar()
 
-
-
-
-
-
         // Habilitar el botón de navegación (hamburguesa)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setDisplayShowHomeEnabled(true)
 
         // Manejar la selección de elementos en el NavigationView
-        navigationView.setNavigationItemSelectedListener {
-            handleNavigationItemSelected(it.itemId)
+        navigationView.setNavigationItemSelectedListener { item ->
+            handleNavigationItemSelected(item.itemId)
         }
 
         // Manejar la selección de elementos en el BottomNavigationView
-        bottomNavigation.setOnItemSelectedListener {
-            handleBottomNavigationItemSelected(it.itemId)
-
-
+        bottomNavigation.setOnItemSelectedListener { item ->
+            handleBottomNavigationItemSelected(item.itemId)
         }
-
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
@@ -79,11 +71,7 @@ class HomeActivity : AppCompatActivity(),NavigationView.OnNavigationItemSelected
     // Manejar la selección de elementos en el NavigationView
     private fun handleNavigationItemSelected(itemId: Int): Boolean {
         when (itemId) {
-            R.id.nav_item1 -> {
-                exampleText.text = ""
-                return true
-            }
-            R.id.nav_item2 -> {
+            R.id.nav_item1, R.id.nav_item2 -> {
                 exampleText.text = ""
                 return true
             }
@@ -96,34 +84,39 @@ class HomeActivity : AppCompatActivity(),NavigationView.OnNavigationItemSelected
     private fun handleBottomNavigationItemSelected(itemId: Int): Boolean {
         when (itemId) {
             R.id.page_1 -> {
-                exampleText.text = ""
+                changeFragment(BienestarFragment()) //asi es como agregar los fragmentos
+                return true
+                }
+            R.id.page_2 -> {
+                changeFragment(DiarioFragment()) // y se puede copiar y pegar facilmente
                 return true
             }
-            R.id.page_2, R.id.page_3, R.id.page_4, R.id.page_5 -> {
+            R.id.page_3, R.id.page_4, R.id.page_5 -> {
                 exampleText.text = ""
                 return true
             }
             else -> return false
         }
-
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
-
-        when(item.itemId){
+        when (item.itemId) {
             R.id.page_1 -> {
                 changeFragment(BienestarFragment())
+                return true
             }
             R.id.page_2 -> {
                 changeFragment(DiarioFragment())
+                return true
             }
         }
-
-        return true
+        return false
     }
-    fun changeFragment(frag: Fragment){
-        val fragment = supportFragmentManager.beginTransaction()
-        fragment.replace(R.id.fragment_container, frag).commit()
 
+    fun changeFragment(frag: Fragment) {
+        val fragmentTransaction = supportFragmentManager.beginTransaction()
+        fragmentTransaction.replace(R.id.fragment_container, frag)
+        fragmentTransaction.addToBackStack(null) // Puedes agregar esto si deseas agregar el fragmento a la pila de retroceso
+        fragmentTransaction.commit()
     }
 }

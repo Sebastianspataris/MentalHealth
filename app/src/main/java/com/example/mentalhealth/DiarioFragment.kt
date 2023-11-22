@@ -1,4 +1,4 @@
-package com.example.mentalhealth.activities
+package com.example.mentalhealth
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
