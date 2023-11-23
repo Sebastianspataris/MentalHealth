@@ -9,7 +9,9 @@ import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
 import com.example.mentalhealth.BienestarFragment
+import com.example.mentalhealth.CemoncionesFragment
 import com.example.mentalhealth.DiarioFragment
+import com.example.mentalhealth.InfoDiagFragment
 import com.example.mentalhealth.MindFragment
 import com.example.mentalhealth.R
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -99,10 +101,17 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 return true
             }
 
-            R.id.page_4, R.id.page_5 -> {
-                exampleText.text = ""
+            R.id.page_4 -> {
+                changeFragment(CemoncionesFragment())
                 return true
             }
+
+
+            R.id.page_5 -> {
+                changeFragment(InfoDiagFragment())
+                return true
+            }
+
 
             else -> return false
         }
