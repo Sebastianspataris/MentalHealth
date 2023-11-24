@@ -38,7 +38,9 @@
         android:layout_marginHorizontal="16dp"
         android:layout_marginTop="16dp"
         android:background="#FFFFFF"
-        android:hint="Nombre" />
+        android:hint="Nombre"
+        android:maxLines="1"
+        android:minLines="1"/>
 
     <EditText
         android:id="@+id/editTextLastName"
@@ -48,7 +50,9 @@
         android:layout_marginHorizontal="16dp"
         android:layout_marginTop="8dp"
         android:background="#FFFFFF"
-        android:hint="Apellido" />
+        android:hint="Apellido"
+        android:maxLines="1"
+        android:minLines="1"/>
 
     <EditText
         android:id="@+id/editTextEmail"
@@ -59,7 +63,9 @@
         android:layout_below="@id/editTextLastName"
         android:layout_marginTop="8dp"
         android:layout_marginHorizontal="16dp"
-        android:background="#FFFFFF"/>
+        android:background="#FFFFFF"
+        android:maxLines="1"
+        android:minLines="1"/>
 
     <EditText
         android:id="@+id/editTextDOB"
@@ -72,7 +78,9 @@
         android:layout_below="@id/editTextEmail"
         android:layout_marginTop="8dp"
         android:layout_marginHorizontal="16dp"
-        android:background="#FFFFFF"/>
+        android:background="#FFFFFF"
+        android:maxLines="1"
+        android:minLines="1"/>
 
     <EditText
         android:id="@+id/editDiagnosis"
@@ -82,14 +90,41 @@
         android:hint="Diagnostico medico"
         android:layout_marginTop="8dp"
         android:layout_marginHorizontal="16dp"
-        android:background="#FFFFFF"/>
+        android:background="#FFFFFF"
+        android:maxLines="1"
+        android:minLines="1"/>
+
+    <EditText
+        android:id="@+id/password1"
+        android:layout_width="326dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editDiagnosis"
+        android:hint="Contraseña"
+        android:layout_marginTop="8dp"
+        android:layout_marginHorizontal="16dp"
+        android:background="#FFFFFF"
+        android:maxLines="1"
+        android:minLines="1"
+        android:inputType="textPassword"/>
+    <EditText
+        android:id="@+id/password2"
+        android:layout_width="326dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/password1"
+        android:hint="Repetir Contraseña"
+        android:layout_marginTop="8dp"
+        android:layout_marginHorizontal="16dp"
+        android:background="#FFFFFF"
+        android:maxLines="1"
+        android:minLines="1"
+        android:inputType="textPassword"/>
 
     <Button
         android:id="@+id/buttonRegister"
         android:layout_width="326dp"
         android:layout_height="wrap_content"
         android:text="Registrarse"
-        android:layout_below="@id/editDiagnosis"
+        android:layout_below="@id/password2"
         android:layout_marginTop="16dp"
         android:layout_marginHorizontal="16dp"
         />
