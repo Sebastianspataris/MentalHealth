@@ -9,15 +9,18 @@
         android:title="Agenda" />
     <item
         android:id="@+id/nav_item3"
-        android:title="Informacion sobre problems de salud mental" />
+        android:title="Alarma de Medicamentos" />
     <item
         android:id="@+id/nav_item4"
-        android:title="Medicos Cercanos" />
+        android:title="Informacion sobre problems de salud mental" />
     <item
         android:id="@+id/nav_item5"
+        android:title="Medicos Cercanos" />
+    <item
+        android:id="@+id/nav_item6"
         android:title="Efectos secundarios de medicamentos" />
 
     <item
-        android:id="@+id/nav_item6"
+        android:id="@+id/nav_item7"
         android:title="Soporte" />
 </menu>
