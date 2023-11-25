@@ -10,9 +10,7 @@
     <item
         android:id="@+id/nav_item3"
         android:title="Alarma de Medicamentos" />
-    <item
-        android:id="@+id/nav_item4"
-        android:title="Informacion sobre problems de salud mental" />
+
     <item
         android:id="@+id/nav_item5"
         android:title="Medicos Cercanos" />
