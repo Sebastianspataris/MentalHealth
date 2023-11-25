@@ -8,12 +8,19 @@ import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
+import com.example.mentalhealth.AgendaFragment
+import com.example.mentalhealth.AlarmaFragment
 import com.example.mentalhealth.BienestarFragment
 import com.example.mentalhealth.CemoncionesFragment
 import com.example.mentalhealth.DiarioFragment
+import com.example.mentalhealth.EfectosSecFragment
 import com.example.mentalhealth.InfoDiagFragment
+import com.example.mentalhealth.InfoProbFragment
+import com.example.mentalhealth.MedicFragment
 import com.example.mentalhealth.MindFragment
+import com.example.mentalhealth.PerfilFragment
 import com.example.mentalhealth.R
+import com.example.mentalhealth.SoporteFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView
 
@@ -74,8 +81,31 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     // Manejar la selección de elementos en el NavigationView
     private fun handleNavigationItemSelected(itemId: Int): Boolean {
         when (itemId) {
-            R.id.nav_item1, R.id.nav_item2 -> {
-                exampleText.text = ""
+            R.id.nav_item1 -> {
+                changeFragment(PerfilFragment())
+                return true
+            }  R.id.nav_item2 -> {
+            changeFragment(AgendaFragment())
+            return true
+        }
+            R.id.nav_item3 -> {
+                changeFragment(AlarmaFragment())
+                return true
+            }
+            R.id.nav_item4 -> {
+                changeFragment(InfoProbFragment())
+                return true
+            }
+            R.id.nav_item5 -> {
+                changeFragment(MedicFragment())
+                return true
+            }
+            R.id.nav_item6 -> {
+                changeFragment(EfectosSecFragment())
+                return true
+            }
+            R.id.nav_item7 -> {
+                changeFragment(SoporteFragment())
                 return true
             }
             // Agrega más casos según sea necesario
