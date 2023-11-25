@@ -96,11 +96,7 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 closeDrawer()
                 return true
             }
-            R.id.nav_item4 -> {
-                changeFragment(InfoProbFragment())
-                closeDrawer()
-                return true
-            }
+
             R.id.nav_item5 -> {
                 changeFragment(MedicFragment())
                 closeDrawer()
