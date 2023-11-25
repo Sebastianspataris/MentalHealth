@@ -83,29 +83,37 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         when (itemId) {
             R.id.nav_item1 -> {
                 changeFragment(PerfilFragment())
+                closeDrawer()
                 return true
-            }  R.id.nav_item2 -> {
-            changeFragment(AgendaFragment())
-            return true
-        }
+            }
+            R.id.nav_item2 -> {
+                changeFragment(AgendaFragment())
+                closeDrawer()
+                return true
+            }
             R.id.nav_item3 -> {
                 changeFragment(AlarmaFragment())
+                closeDrawer()
                 return true
             }
             R.id.nav_item4 -> {
                 changeFragment(InfoProbFragment())
+                closeDrawer()
                 return true
             }
             R.id.nav_item5 -> {
                 changeFragment(MedicFragment())
+                closeDrawer()
                 return true
             }
             R.id.nav_item6 -> {
                 changeFragment(EfectosSecFragment())
+                closeDrawer()
                 return true
             }
             R.id.nav_item7 -> {
                 changeFragment(SoporteFragment())
+                closeDrawer()
                 return true
             }
             // Agrega más casos según sea necesario
@@ -118,52 +126,46 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         when (itemId) {
             R.id.page_1 -> {
                 changeFragment(BienestarFragment())
+                closeDrawer()
                 return true
             }
-
             R.id.page_2 -> {
                 changeFragment(DiarioFragment())
+                closeDrawer()
                 return true
             }
-
             R.id.page_3 -> {
                 changeFragment(MindFragment())
+                closeDrawer()
                 return true
             }
-
             R.id.page_4 -> {
                 changeFragment(CemoncionesFragment())
+                closeDrawer()
                 return true
             }
-
-
             R.id.page_5 -> {
                 changeFragment(InfoDiagFragment())
+                closeDrawer()
                 return true
             }
-
-
             else -> return false
         }
     }
+
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
-        when (item.itemId) {
-            R.id.page_1 -> {
-                changeFragment(BienestarFragment())
-                return true
-            }
-            R.id.page_2 -> {
-                changeFragment(DiarioFragment())
-                return true
-            }
-        }
+        // Puedes manejar la selección de elementos del NavigationView aquí si es necesario
         return false
+    }
+
+    private fun closeDrawer() {
+        drawerLayout.closeDrawer(GravityCompat.START)
     }
 
     fun changeFragment(frag: Fragment) {
         val fragmentTransaction = supportFragmentManager.beginTransaction()
         fragmentTransaction.replace(R.id.fragment_container, frag)
-        fragmentTransaction.addToBackStack(null) // Puedes agregar esto si deseas agregar el fragmento a la pila de retroceso
+        fragmentTransaction.addToBackStack(null)
         fragmentTransaction.commit()
     }
 }
