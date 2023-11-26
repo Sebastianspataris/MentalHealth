@@ -14,7 +14,7 @@ import com.example.mentalhealth.BienestarFragment
 import com.example.mentalhealth.CemoncionesFragment
 import com.example.mentalhealth.DiarioFragment
 import com.example.mentalhealth.EfectosSecFragment
-import com.example.mentalhealth.InfoDiagFragment
+import InfoDiagFragment
 import com.example.mentalhealth.InfoProbFragment
 import com.example.mentalhealth.MedicFragment
 import com.example.mentalhealth.MindFragment
