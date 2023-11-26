@@ -13,13 +13,14 @@
 
         <Spinner
             android:id="@+id/spinner4"
-            android:layout_width="336dp"
+            android:layout_width="300dp"
             android:layout_height="37dp"
-            android:layout_marginBottom="24dp"
+            android:layout_marginBottom="16dp"
             app:layout_constraintBottom_toTopOf="@+id/cuadroText"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.117"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintHorizontal_bias="0.493"
+            app:layout_constraintStart_toStartOf="parent"
+            android:background="@color/white"/>
 
         <EditText
             android:id="@+id/cuadroText"

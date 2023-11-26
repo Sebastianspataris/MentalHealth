@@ -1,3 +1,5 @@
+package com.example.mentalhealth
+
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -24,6 +26,7 @@ class InfoDiagFragment : Fragment() {
         cuadroText = view.findViewById(R.id.cuadroText)
 
         val opciones = arrayOf(
+            "Enfermedades de salud mental",
             "TDAH",
             "Depresión",
             "Trastorno bipolar",
@@ -121,7 +124,7 @@ class InfoDiagFragment : Fragment() {
                 if (informacionAdicional?.isNotEmpty() == true) {
                     cuadroText.setText(informacionAdicional)
                 } else {
-                    cuadroText.setText("No hay información disponible")
+                    cuadroText.setText("")
                 }
             }
 
