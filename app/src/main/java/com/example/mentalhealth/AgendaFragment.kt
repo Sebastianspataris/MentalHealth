@@ -6,19 +6,26 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.TextView
 import android.widget.CalendarView
 import android.widget.EditText
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import com.example.mentalhealth.activities.DatabaseHelper
 import java.text.SimpleDateFormat
 import java.util.Calendar
-import java.util.Locale
+import android.widget.TableLayout
+import android.widget.TableRow
+
+
 
 class AgendaFragment : Fragment() {
 
     private lateinit var selectedDate: Calendar
     private lateinit var eventNameEditText: EditText
-
+    private lateinit var databaseHelper: DatabaseHelper
+    private lateinit var createEventButton: Button
+    private lateinit var eventsTableLayout: TableLayout
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -26,7 +33,8 @@ class AgendaFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_agenda, container, false)
 
         val calendarView: CalendarView = view.findViewById(R.id.calendarView)
-        val createEventButton: Button = view.findViewById(R.id.createEventButton)
+        createEventButton = view.findViewById(R.id.createEventButton)
+        eventsTableLayout = view.findViewById(R.id.eventsTableLayout)
         eventNameEditText = view.findViewById(R.id.eventNameEditText)
 
         calendarView.setOnDateChangeListener { _, year, month, dayOfMonth ->
@@ -36,9 +44,11 @@ class AgendaFragment : Fragment() {
             showToast("Fecha seleccionada: ${dayOfMonth}/${month + 1}/${year}")
         }
 
+        databaseHelper = DatabaseHelper(requireContext())
+
         createEventButton.setOnClickListener {
-            // Lógica para crear un evento simple con solo la fecha y el nombre del evento
-            createSimpleEvent(selectedDate, eventNameEditText.text.toString())
+            createAndSaveEvent(selectedDate, eventNameEditText.text.toString())
+            updateUpcomingEvents()
         }
 
         return view
@@ -48,12 +58,28 @@ class AgendaFragment : Fragment() {
         Toast.makeText(requireContext(), message, Toast.LENGTH_SHORT).show()
     }
 
-    private fun createSimpleEvent(eventDate: Calendar, eventName: String) {
-        val dateFormat = SimpleDateFormat("dd/MM/yyyy", Locale.getDefault())
-        val formattedDate = dateFormat.format(eventDate.time)
+    private fun createAndSaveEvent(eventDate: Calendar, eventName: String) {
+        val eventId = databaseHelper.insertEvent(eventName, eventDate)
+        showToast("Evento creado con ID: $eventId")
+    }
 
-        val eventDetails = "Evento: $eventName\nFecha: $formattedDate"
+    private fun updateUpcomingEvents() {
+        val upcomingEvents = databaseHelper.getUpcomingEvents(3)
 
-        showToast(eventDetails)
+        // Mostrar eventos en el TextView
+
+        eventsTableLayout.removeAllViews()
+        for (event in upcomingEvents) {
+            val row = TableRow(requireContext())
+            val textView = TextView(requireContext()).apply {
+                text = event
+                textSize = 10f // Tamaño de texto ajustado
+            }
+            row.addView(textView)
+            eventsTableLayout.addView(row)
+        }
+
+        showToast("Próximos eventos actualizados")
     }
 }
+
