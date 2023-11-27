@@ -1,7 +1,44 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AgendaFragment"
-    android:background="@color/blight"/>
+    tools:context=".AgendaFragment">
+
+    <CalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/eventsTableLayout"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="16dp" />
+
+    <EditText
+        android:id="@+id/eventNameEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/eventsTableLayout"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="8dp"
+        android:hint="Nombre del Evento"
+        android:inputType="text" />
+
+    <TableLayout
+        android:id="@+id/eventsTableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/createEventButton"
+        android:layout_marginBottom="16dp"
+        android:visibility="visible">
+
+        <!-- Define las columnas de la tabla si es necesario -->
+
+    </TableLayout>
+
+    <Button
+        android:id="@+id/createEventButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Crear Evento" />
+</RelativeLayout>
