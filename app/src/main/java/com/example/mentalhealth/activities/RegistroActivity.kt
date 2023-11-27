@@ -1,16 +1,14 @@
 package com.example.mentalhealth.activities
 
-import android.app.DatePickerDialog
+import android.annotation.SuppressLint
+import android.content.ContentValues
 import android.os.Bundle
 import android.widget.Button
-import android.widget.DatePicker
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.mentalhealth.activities.DatabaseHelper
 import com.example.mentalhealth.R
-import java.text.ParseException
-import java.text.SimpleDateFormat
-import java.util.*
 
 class RegistroActivity : AppCompatActivity() {
 
@@ -18,11 +16,12 @@ class RegistroActivity : AppCompatActivity() {
     private lateinit var lastNameEditText: EditText
     private lateinit var emailEditText: EditText
     private lateinit var dobEditText: EditText
-    private lateinit var diagnosisEditText: EditText
+    private lateinit var password1EditText: EditText
+    private lateinit var password2EditText: EditText
     private lateinit var registerButton: Button
+    private lateinit var databaseHelper: DatabaseHelper
 
-    private lateinit var selectedDate: Date
-
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.registro_activity)
@@ -32,68 +31,49 @@ class RegistroActivity : AppCompatActivity() {
         lastNameEditText = findViewById(R.id.editTextLastName)
         emailEditText = findViewById(R.id.editTextEmail)
         dobEditText = findViewById(R.id.editTextDOB)
-        diagnosisEditText = findViewById(R.id.editDiagnosis)
+        password1EditText = findViewById(R.id.editTextpassword1)
+        password2EditText = findViewById(R.id.editTextpassword2)
         registerButton = findViewById(R.id.buttonRegister)
+        databaseHelper = DatabaseHelper(this)
 
         // Configurar el clic del botón de registro
         registerButton.setOnClickListener {
             realizarRegistro()
         }
-
-        // Configurar el clic del EditText para la fecha de nacimiento
-        dobEditText.setOnClickListener {
-            showDatePickerDialog()
-        }
-    }
-
-    private fun showDatePickerDialog() {
-        val calendar = Calendar.getInstance()
-        val year = calendar.get(Calendar.YEAR)
-        val month = calendar.get(Calendar.MONTH)
-        val day = calendar.get(Calendar.DAY_OF_MONTH)
-
-        val datePickerDialog = DatePickerDialog(
-            this,
-            DatePickerDialog.OnDateSetListener { _, year, month, dayOfMonth ->
-                val selectedCalendar = Calendar.getInstance()
-                selectedCalendar.set(year, month, dayOfMonth)
-                selectedDate = selectedCalendar.time
-
-                // Formatear la fecha seleccionada y establecerla en el EditText
-                val dateFormat = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
-                val dateString = dateFormat.format(selectedDate)
-                dobEditText.setText(dateString)
-            },
-            year,
-            month,
-            day
-        )
-
-        // Mostrar el cuadro de diálogo del selector de fecha
-        datePickerDialog.show()
     }
 
     private fun realizarRegistro() {
-        // Aquí puedes obtener los valores de los EditText y Spinner
+        // Obtener los valores de los EditText
         val firstName = firstNameEditText.text.toString()
         val lastName = lastNameEditText.text.toString()
         val email = emailEditText.text.toString()
-        val dobString = dobEditText.text.toString()
-        val diagnosis = diagnosisEditText.text.toString()
+        val password1 = password1EditText.text.toString()
+        val password2 = password2EditText.text.toString()
+        val dob = dobEditText.text.toString()
 
-        try {
-            // Parsear la cadena de fecha a un objeto Date
-            val dateFormat = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
-            val dob = dateFormat.parse(dobString)
-
-            // Puedes realizar la lógica de registro aquí
-            // Por ejemplo, podrías validar los datos y luego mostrar un mensaje Toast
-            val mensaje =
-                "Registro exitoso:\nNombre: $firstName $lastName\nCorreo: $email\nDOB: $dobString\nDiagnóstico: $diagnosis"
-            Toast.makeText(this, mensaje, Toast.LENGTH_LONG).show()
-        } catch (e: ParseException) {
-            e.printStackTrace()
-            Toast.makeText(this, "Error al parsear la fecha", Toast.LENGTH_SHORT).show()
+        // Validar que todos los campos estén llenos
+        if (firstName.isEmpty() || lastName.isEmpty() || email.isEmpty() || password1.isEmpty() || password2.isEmpty() || dob.isEmpty()) {
+            Toast.makeText(this, "Por favor, complete todos los campos", Toast.LENGTH_SHORT).show()
+            return
         }
+
+        // Validar que las contraseñas coincidan
+        if (password1 != password2) {
+            Toast.makeText(this, "Las contraseñas no coinciden", Toast.LENGTH_SHORT).show()
+            return
+        }
+
+        // Insertar el nuevo usuario en la base de datos
+        val db = databaseHelper.writableDatabase
+        val contentValues = ContentValues().apply {
+            put(DatabaseHelper.COLUMN_USERNAME, email)
+            put(DatabaseHelper.COLUMN_PASSWORD, password1)
+        }
+        db.insert(DatabaseHelper.TABLE_USERS, null, contentValues)
+
+        // Mostrar un mensaje de registro exitoso
+        val mensaje =
+            "Registro exitoso:\nNombre: $firstName $lastName\nCorreo: $email\nDOB: $dob"
+        Toast.makeText(this, mensaje, Toast.LENGTH_LONG).show()
     }
 }
