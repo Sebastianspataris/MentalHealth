@@ -101,8 +101,8 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 closeDrawer()
                 return true
             }
-            R.id.nav_item6 -> {
-                changeFragment(EfectosSecFragment())
+            R.id.page_8 -> {
+                changeFragment(InfoDiagFragment())
                 closeDrawer()
                 return true
             }
@@ -139,8 +139,8 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 closeDrawer()
                 return true
             }
-            R.id.page_5 -> {
-                changeFragment(InfoDiagFragment())
+            R.id.nav_item5 -> {
+                changeFragment(EfectosSecFragment())
                 closeDrawer()
                 return true
             }
