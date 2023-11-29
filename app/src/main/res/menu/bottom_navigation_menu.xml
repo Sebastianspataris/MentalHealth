@@ -21,8 +21,8 @@
         android:icon="@drawable/smile"
         android:title="Consejo para emociones"/>
     <item
-        android:id="@+id/page_5"
+        android:id="@+id/nav_item5"
         android:enabled="true"
         android:icon="@drawable/baseline_maps_ugc_24"
-        android:title="informacion de diagnostico"/>
+        android:title="Efectos Secundarios "/>
 </menu>

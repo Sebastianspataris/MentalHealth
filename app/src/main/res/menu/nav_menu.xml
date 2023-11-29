@@ -12,11 +12,8 @@
         android:title="Alarma de Medicamentos" />
 
     <item
-        android:id="@+id/nav_item5"
-        android:title="Medicos Cercanos" />
-    <item
-        android:id="@+id/nav_item6"
-        android:title="Efectos secundarios de medicamentos" />
+        android:id="@+id/page_8"
+        android:title="Informacion de diagnostico" />
 
     <item
         android:id="@+id/nav_item7"
