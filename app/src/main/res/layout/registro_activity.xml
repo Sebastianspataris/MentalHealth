@@ -10,7 +10,6 @@
         android:id="@+id/imageView"
         android:layout_width="323dp"
         android:layout_height="300dp"
-
         android:layout_alignParentTop="true"
         android:layout_centerInParent="true"
         android:layout_marginStart="14dp"
@@ -23,12 +22,10 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_below="@id/imageView"
-
         android:layout_centerHorizontal="true"
-
         android:layout_marginTop="150dp"
         android:text="Registro"
-        android:textSize="36sp"></TextView>
+        android:textSize="36sp"/>
 
     <EditText
         android:id="@+id/editTextFirstName"
