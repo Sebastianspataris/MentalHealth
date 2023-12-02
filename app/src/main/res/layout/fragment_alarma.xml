@@ -1,13 +1,48 @@
-<?xml version="1.0" encoding="utf-8"?>
+<!-- res/layout/fragment_alarma.xml -->
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AlarmaFragment"
     android:background="@color/blight">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
 
+        <TimePicker
+            android:id="@+id/timePicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="16dp"/>
 
+        <EditText
+            android:id="@+id/medicationNameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/timePicker"
+            android:layout_marginTop="16dp"
+            android:hint="Nombre del medicamento" />
 
+        <EditText
+            android:id="@+id/medicationQuantityEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/medicationNameEditText"
+            android:layout_marginTop="16dp"
+            android:hint="Cantidad del medicamento" />
+
+        <Button
+            android:id="@+id/setAlarmButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/medicationQuantityEditText"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:text="Configurar Alarma" />
+
+    </RelativeLayout>
 
 </FrameLayout>
