@@ -1,7 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PerfilFragment"
-    android:background="@color/greenlight"/>
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/usernameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text=""
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/firstNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/usernameTextView"
+        android:layout_centerHorizontal="true"
+        android:text=""
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/lastNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/firstNameTextView"
+        android:layout_centerHorizontal="true"
+        android:text=""
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/diagTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lastNameTextView"
+        android:layout_centerHorizontal="true"
+        android:text=""
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/dobTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/diagTextView"
+        android:layout_centerHorizontal="true"
+        android:text=""
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/passwordTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dobTextView"
+        android:layout_centerHorizontal="true"
+        android:text=""
+        android:layout_marginTop="8dp"/>
+</RelativeLayout>
