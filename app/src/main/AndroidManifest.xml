@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
     <application
 
         android:allowBackup="true"
@@ -30,6 +31,17 @@
             android:theme="@style/AppTheme.NoActionBar">
             <!-- ... otras configuraciones ... -->
         </activity>
+
+        <receiver
+            android:name=".AlarmReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.TIME_SET" />
+                <!-- Agrega cualquier otra acción que necesites para manejar la alarma -->
+            </intent-filter>
+        </receiver>
 
     </application>
 

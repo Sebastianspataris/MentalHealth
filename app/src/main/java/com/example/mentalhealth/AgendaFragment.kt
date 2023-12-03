@@ -8,10 +8,10 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
 import android.widget.CalendarView
+import com.example.mentalhealth.activities.DatabaseHelper
 import android.widget.EditText
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import com.example.mentalhealth.activities.DatabaseHelper
 import java.text.SimpleDateFormat
 import java.util.Calendar
 import android.widget.TableLayout
