@@ -1,13 +1,12 @@
+package com.example.mentalhealth
+
 import android.app.AlarmManager
 import android.app.PendingIntent
 import android.content.BroadcastReceiver
 import android.content.ContentValues
 import android.content.Context
 import android.content.Intent
-import android.annotation.SuppressLint
-import android.database.sqlite.SQLiteDatabase
 import android.os.Build
-import java.text.SimpleDateFormat
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -17,8 +16,9 @@ import android.widget.EditText
 import android.widget.TimePicker
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import com.example.mentalhealth.R
 import java.util.Calendar
+import com.example.mentalhealth.activities.DatabaseHelper
+import com.example.mentalhealth.util.DateUtils
 
 class AlarmaFragment : Fragment() {
 
@@ -80,7 +80,7 @@ class AlarmaFragment : Fragment() {
             requireContext(),
             eventId.toInt(), // Usamos el ID de la alarma como requestCode
             intent,
-            PendingIntent.FLAG_UPDATE_CURRENT
+            PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
         )
 
         // Usar setExact para versiones de Android >= 19 (KITKAT) y set para versiones anteriores
@@ -118,7 +118,7 @@ class AlarmaFragment : Fragment() {
         val values = ContentValues().apply {
             put(DatabaseHelper.COLUMN_ALARM_MEDICATION_NAME, medicationName)
             put(DatabaseHelper.COLUMN_ALARM_MEDICATION_QUANTITY, medicationQuantity)
-            put(DatabaseHelper.COLUMN_ALARM_TIME, DatabaseHelper.formatDate(calendar))
+            put(DatabaseHelper.COLUMN_ALARM_TIME, DateUtils.formatDateToString(calendar))
         }
 
         return db.insert(DatabaseHelper.TABLE_ALARMS, null, values)

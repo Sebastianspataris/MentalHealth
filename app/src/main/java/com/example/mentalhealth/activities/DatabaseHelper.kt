@@ -10,6 +10,8 @@ import java.util.Calendar
 import java.text.SimpleDateFormat
 import android.util.Log
 import java.util.Locale
+import com.example.mentalhealth.util.DateUtils
+
 
 class DatabaseHelper(context: Context) :
     SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION) {
@@ -30,14 +32,21 @@ class DatabaseHelper(context: Context) :
         internal const val COLUMN_EVENT_ID = "event_id"
         internal const val COLUMN_EVENT_NAME = "event_name"
         internal const val COLUMN_EVENT_DATE = "event_date"
+        internal const val TABLE_ALARMS = "events"
+        private const val COLUMN_ALARM_ID = "event_id"
+        internal const val COLUMN_ALARM_MEDICATION_NAME = "event_name"
+        internal const val COLUMN_ALARM_MEDICATION_QUANTITY = "event_date"
+        internal const val COLUMN_ALARM_TIME ="event_date"
 
         private const val CREATE_USERS_TABLE =
-            "CREATE TABLE $TABLE_USERS ($COLUMN_ID INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                    "$COLUMN_DIAG TEXT, $COLUMN_USERNAME TEXT, $COLUMN_FIRST_NAME TEXT, $COLUMN_LAST_NAME TEXT, $COLUMN_DOB DATE, $COLUMN_PASSWORD TEXT)"
+            "CREATE TABLE $TABLE_USERS ($COLUMN_ID INTEGER PRIMARY KEY AUTOINCREMENT, $COLUMN_DIAG TEXT, $COLUMN_USERNAME TEXT, $COLUMN_FIRST_NAME TEXT, $COLUMN_LAST_NAME TEXT, $COLUMN_DOB DATE, $COLUMN_PASSWORD TEXT)"
 
         private const val CREATE_EVENTS_TABLE =
-            "CREATE TABLE $TABLE_EVENTS ($COLUMN_EVENT_ID INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                    "$COLUMN_EVENT_NAME TEXT, $COLUMN_EVENT_DATE TEXT)"
+            "CREATE TABLE $TABLE_EVENTS ($COLUMN_EVENT_ID INTEGER PRIMARY KEY AUTOINCREMENT, $COLUMN_EVENT_NAME TEXT, $COLUMN_EVENT_DATE TEXT)"
+
+        private const val CREATE_ALARM_TABLE =
+            "CREATE TABLE $TABLE_ALARMS ($COLUMN_ALARM_ID INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                    "$COLUMN_ALARM_MEDICATION_NAME TEXT, $COLUMN_ALARM_MEDICATION_QUANTITY TEXT, $COLUMN_ALARM_TIME DATE)"
 
         private val dateFormat = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
     }
@@ -70,7 +79,9 @@ class DatabaseHelper(context: Context) :
         }
         return db.insert(TABLE_EVENTS, null, values)
     }
-
+    fun formatDateToString(calendar: Calendar): String {
+        return DateUtils.formatDateToString(calendar)
+    }
     @SuppressLint("Range")
     fun getUpcomingEvents(limit: Int): List<String> {
         val db = readableDatabase
@@ -98,8 +109,10 @@ class DatabaseHelper(context: Context) :
         cursor.close()
         return events
     }
-private fun formatDate(calendar: Calendar): String {
+    fun formatDate(calendar: Calendar): String {
     val dateFormat = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
     return dateFormat.format(calendar.time)
             }
     }
+
+

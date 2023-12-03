@@ -1,6 +1,6 @@
 package com.example.mentalhealth.activities
 
-import AlarmaFragment
+import com.example.mentalhealth.AlarmaFragment
 import android.os.Bundle
 import android.view.MenuItem
 import android.widget.TextView
