@@ -3,6 +3,7 @@ package com.example.mentalhealth.activities
 import android.annotation.SuppressLint
 import android.content.ContentValues
 import android.os.Bundle
+import android.content.Intent
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
@@ -12,6 +13,7 @@ import com.example.mentalhealth.R
 
 class RegistroActivity : AppCompatActivity() {
 
+    private lateinit var diagEditText: EditText
     private lateinit var firstNameEditText: EditText
     private lateinit var lastNameEditText: EditText
     private lateinit var emailEditText: EditText
@@ -27,6 +29,7 @@ class RegistroActivity : AppCompatActivity() {
         setContentView(R.layout.registro_activity)
 
         // Inicializar vistas
+        diagEditText = findViewById(R.id.editDiagnosis)
         firstNameEditText = findViewById(R.id.editTextFirstName)
         lastNameEditText = findViewById(R.id.editTextLastName)
         emailEditText = findViewById(R.id.editTextEmail)
@@ -43,7 +46,7 @@ class RegistroActivity : AppCompatActivity() {
     }
 
     private fun realizarRegistro() {
-        // Obtener los valores de los EditText
+        val diagnostic = diagEditText.text.toString()
         val firstName = firstNameEditText.text.toString()
         val lastName = lastNameEditText.text.toString()
         val email = emailEditText.text.toString()
@@ -52,7 +55,7 @@ class RegistroActivity : AppCompatActivity() {
         val dob = dobEditText.text.toString()
 
         // Validar que todos los campos estén llenos
-        if (firstName.isEmpty() || lastName.isEmpty() || email.isEmpty() || password1.isEmpty() || password2.isEmpty() || dob.isEmpty()) {
+        if (firstName.isEmpty() || lastName.isEmpty() || email.isEmpty() ||diagnostic.isEmpty() || password1.isEmpty() || password2.isEmpty() || dob.isEmpty()) {
             Toast.makeText(this, "Por favor, complete todos los campos", Toast.LENGTH_SHORT).show()
             return
         }
@@ -66,7 +69,11 @@ class RegistroActivity : AppCompatActivity() {
         // Insertar el nuevo usuario en la base de datos
         val db = databaseHelper.writableDatabase
         val contentValues = ContentValues().apply {
+            put(DatabaseHelper.COLUMN_DIAG, diagnostic)
             put(DatabaseHelper.COLUMN_USERNAME, email)
+            put(DatabaseHelper.COLUMN_FIRST_NAME, firstName)
+            put(DatabaseHelper.COLUMN_LAST_NAME, lastName)
+            put(DatabaseHelper.COLUMN_DOB, dob)
             put(DatabaseHelper.COLUMN_PASSWORD, password1)
         }
         db.insert(DatabaseHelper.TABLE_USERS, null, contentValues)
@@ -75,5 +82,9 @@ class RegistroActivity : AppCompatActivity() {
         val mensaje =
             "Registro exitoso:\nNombre: $firstName $lastName\nCorreo: $email\nDOB: $dob"
         Toast.makeText(this, mensaje, Toast.LENGTH_LONG).show()
+
+        val intent = Intent(this, LoginActivity::class.java)
+        startActivity(intent)
+        finish()
     }
 }

@@ -14,7 +14,8 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var editTextUsername: EditText
     private lateinit var editTextPassword: EditText
     private lateinit var btnLogin: Button
-    private lateinit var btnGoToRegister: Button // Boton registro
+    private lateinit var btnGoToRegister: Button
+    private val dbHelper = DatabaseHelper(this)
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -44,11 +45,15 @@ class LoginActivity : AppCompatActivity() {
             val enteredPassword = editTextPassword.text.toString()
 
             if (enteredUsername.isNotEmpty() && enteredPassword.isNotEmpty()) {
-                val db = DatabaseHelper(this).readableDatabase
-                val userExists = DatabaseHelper(this).checkUserCredentials(enteredUsername, enteredPassword)
+                // Utilizar la instancia única de DatabaseHelper
+                val userExists = dbHelper.checkUserCredentials(enteredUsername, enteredPassword)
 
                 if (userExists || (enteredUsername == "admin" && enteredPassword == "1234")) {
-                    // Credenciales válidas, iniciar la actividad principal
+                    // Credenciales válidas, guardar el nombre de usuario en la sesión
+                    val sessionManager = SessionManager(this)
+                    sessionManager.username = enteredUsername
+
+                    // Iniciar la actividad principal
                     val intent = Intent(this, HomeActivity::class.java)
                     startActivity(intent)
                     finish()

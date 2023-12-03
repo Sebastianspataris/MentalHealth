@@ -11,19 +11,21 @@ import java.text.SimpleDateFormat
 import android.util.Log
 import java.util.Locale
 
-
 class DatabaseHelper(context: Context) :
     SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION) {
 
     companion object {
         const val DATABASE_NAME = "mental_health.db"
-        const val DATABASE_VERSION = 2
-
+        const val DATABASE_VERSION = 6
         // Cambiados a internal para que puedan ser accesibles desde otras clases en el mismo módulo
         internal const val TABLE_USERS = "users"
-        internal const val COLUMN_ID= "id"
+        private const val COLUMN_ID= "id"
+        internal const val COLUMN_FIRST_NAME = "first_name"
+        internal const val COLUMN_LAST_NAME = "last_name"
         internal const val COLUMN_USERNAME = "username"
         internal const val COLUMN_PASSWORD = "password"
+        internal const val COLUMN_DOB = "dob"
+        internal const val COLUMN_DIAG = "diagnostic"
         internal const val TABLE_EVENTS = "events"
         internal const val COLUMN_EVENT_ID = "event_id"
         internal const val COLUMN_EVENT_NAME = "event_name"
@@ -31,7 +33,8 @@ class DatabaseHelper(context: Context) :
 
         private const val CREATE_USERS_TABLE =
             "CREATE TABLE $TABLE_USERS ($COLUMN_ID INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                    "$COLUMN_USERNAME TEXT, $COLUMN_PASSWORD TEXT)"
+                    "$COLUMN_DIAG TEXT, $COLUMN_USERNAME TEXT, $COLUMN_FIRST_NAME TEXT, $COLUMN_LAST_NAME TEXT, $COLUMN_DOB DATE, $COLUMN_PASSWORD TEXT)"
+
         private const val CREATE_EVENTS_TABLE =
             "CREATE TABLE $TABLE_EVENTS ($COLUMN_EVENT_ID INTEGER PRIMARY KEY AUTOINCREMENT, " +
                     "$COLUMN_EVENT_NAME TEXT, $COLUMN_EVENT_DATE TEXT)"
@@ -47,8 +50,6 @@ class DatabaseHelper(context: Context) :
 
     override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
         Log.d("DatabaseHelper", "onUpgrade: Upgrading database")
-        // En caso de actualizaciones futuras de la base de datos
-        // Puedes realizar migraciones de datos aquí si es necesario
     }
     fun checkUserCredentials(username: String, password: String): Boolean {
         val db = readableDatabase
@@ -102,7 +103,3 @@ private fun formatDate(calendar: Calendar): String {
     return dateFormat.format(calendar.time)
             }
     }
-
-
-
-
