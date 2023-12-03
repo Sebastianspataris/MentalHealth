@@ -37,7 +37,7 @@ class EfectosSecFragment : Fragment() {
             "Brexpiprazol", "Cariprazina", "Clotiapina", "Clozapina", "Flupentixol",
             "Fluphenazina", "Risperidona", "Sertindol", "Paliperidona", "Citalopram",
             "Olanzapina", "Melperona", "Loxapina", "Levomepromazina", "Levosulpirida",
-            "Trifluoperazina", "Perospirona", "Amoxapina", "Oxitriptán", "Trazodona",
+            "Trifluoperazina", "Amoxapina", "Oxitriptán", "Trazodona",
             "Vilazodona", "Lisdexanfetamina", "Maprotilina", "Mianserina", "Mirtazapina",
             "Nefazodona", "Reboxetina", "Selegilina", "Amitriptilina", "Bupropión",
             "Desipramina", "Doxepina", "Imipramina", "Nortriptilina", "Trimipramina",
@@ -2208,6 +2208,960 @@ class EfectosSecFragment : Fragment() {
     
     Cambios en la libido: La memantina/rivastigmina puede afectar la libido o el interés sexual en algunas personas.
 """.trimIndent(),
+
+            "Sertalina" to """
+     Náuseas: Puede causar malestar estomacal o náuseas, especialmente al inicio del tratamiento.
+
+     Insomnio o somnolencia: Algunas personas pueden experimentar dificultades para dormir, mientras que otras pueden sentirse somnolientas.
+
+     Diarrea o estreñimiento: Puede afectar el sistema gastrointestinal y causar cambios en los hábitos intestinales.
+
+     Pérdida de apetito o aumento de peso: Algunas personas pueden experimentar cambios en el apetito, lo que puede resultar en pérdida o ganancia de peso.
+
+     Aumento de la sudoración: Puede producirse un aumento en la transpiración.
+
+     Mareos o vértigo: Algunas personas pueden experimentar sensación de mareo o vértigo.
+
+     Dolor de cabeza: Los dolores de cabeza son un efecto secundario común.
+
+     Disfunción sexual: Puede haber cambios en la libido o dificultades sexuales.
+
+     Agitación o nerviosismo: Algunas personas pueden sentirse más inquietas o nerviosas al tomar sertralina.
+
+     Boca seca: La sensación de boca seca es un efecto secundario posible.
+                """.trimIndent(),
+            "Tianeptina" to """
+             Mejora del estado de ánimo: La tianeptina se prescribe principalmente para el tratamiento de la depresión. Ayuda a mejorar el estado de ánimo en algunas personas al actuar sobre el sistema serotoninérgico en el cerebro.
+
+             Reducción de la ansiedad: Además de tratar la depresión, se ha observado que la tianeptina tiene efectos ansiolíticos, es decir, puede reducir la ansiedad en algunas personas.
+
+             Mejora de la cognición: Algunos estudios sugieren que la tianeptina puede tener efectos positivos en la cognición, como la mejora de la memoria y la función cognitiva. Sin embargo, se necesita más investigación para confirmar estos efectos.
+
+             Falta de efectos secundarios típicos: A diferencia de algunos antidepresivos, la tianeptina generalmente se asocia con menos efectos secundarios sexuales y de aumento de peso. Sin embargo, como con cualquier medicamento, pueden ocurrir efectos secundarios y varían de persona a persona.
+
+             Potencial adictivo: Aunque es un tema de debate, algunos informes sugieren que la tianeptina puede tener un potencial adictivo, especialmente en dosis elevadas o con un uso inadecuado. Se ha observado abuso de tianeptina en algunos lugares, y en algunos países se ha clasificado como una sustancia controlada debido a estas preocupaciones.
+         """.trimIndent(),
+            "Milnaciprán" to """
+                Náuseas: Sensación de malestar estomacal que puede llevar a la necesidad de vomitar.
+
+                Dolor de cabeza: Malestar o dolor en la cabeza.
+
+                Insomnio: Dificultad para conciliar o mantener el sueño.
+
+                Sequedad bucal: Sensación de sequedad en la boca.
+
+                Sudoración excesiva: Producción anormalmente alta de sudor.
+
+                Estreñimiento: Dificultad para evacuar o heces de consistencia más dura de lo normal.
+            """.trimIndent(),
+            "Modafinilo" to """
+                Dolor de cabeza: Puede ser uno de los efectos secundarios más comunes. En muchos casos, es leve y desaparece con el tiempo.
+
+                Náuseas: Algunas personas pueden experimentar malestar estomacal o náuseas después de tomar modafinilo.
+
+                Insomnio: Aunque el modafinilo se utiliza para tratar trastornos del sueño, en algunas personas puede causar dificultades para conciliar el sueño si se toma demasiado tarde en el día.
+
+                Nerviosismo o ansiedad: Algunas personas pueden experimentar un aumento en la ansiedad o sentirse nerviosas después de tomar modafinilo.
+
+                Mareos: Puede causar mareos en algunos individuos.
+
+                Dolor de pecho: En casos raros, se han reportado dolores en el pecho como efecto secundario.
+
+                Aumento de la presión arterial: En algunas personas, el modafinilo puede elevar la presión arterial.
+            """.trimIndent(),
+            "Escitalopram" to """
+                Náuseas: Puede experimentar sensaciones de malestar estomacal o náuseas al tomar escitalopram.
+
+                Insomnio o somnolencia: Algunas personas pueden experimentar dificultades para conciliar el sueño (insomnio) o, por el contrario, sentirse somnolientas.
+
+                Boca seca: La sequedad bucal es un efecto secundario común asociado con el uso de escitalopram.
+
+                Dolor de cabeza: Algunas personas pueden experimentar dolores de cabeza como efecto secundario del medicamento.
+
+                Problemas gastrointestinales: Esto puede incluir diarrea o estreñimiento.
+
+                Aumento de la sudoración: Algunas personas pueden experimentar sudoración excesiva mientras toman escitalopram.
+
+                Pérdida de apetito o aumento de peso: Puede haber cambios en el apetito que resulten en pérdida o aumento de peso.
+
+                Disminución del deseo sexual o dificultades sexuales: Algunas personas pueden experimentar cambios en la libido o dificultades sexuales.
+
+                Agitación o nerviosismo: En algunos casos, el escitalopram puede causar agitación o nerviosismo.
+            """.trimIndent(),
+            "Atomoxetina" to """
+                Náuseas o malestar estomacal: Algunas personas pueden experimentar náuseas o malestar estomacal al tomar atomoxetina.
+
+                Insomnio o somnolencia: Puede haber cambios en los patrones de sueño, como dificultades para conciliar el sueño (insomnio) o somnolencia excesiva.
+
+                Pérdida de apetito: La atomoxetina puede afectar el apetito, resultando en pérdida de apetito en algunas personas.
+
+                Aumento de la presión arterial y del ritmo cardíaco: La atomoxetina puede elevar la presión arterial y aumentar el ritmo cardíaco en algunos individuos.
+
+                Mareos o vértigo: Algunas personas pueden experimentar sensaciones de mareo o vértigo.
+
+                Dolor abdominal: Puede haber molestias o dolor abdominal en algunos casos.
+
+                Estreñimiento o diarrea: Cambios en los hábitos intestinales, como estreñimiento o diarrea, son posibles efectos secundarios.
+
+                Sequedad bucal: La boca seca es otro efecto secundario que algunas personas pueden experimentar.
+
+                Sudoración excesiva: Algunas personas pueden experimentar sudoración excesiva mientras toman atomoxetina.
+
+                Cambios en el deseo sexual o disfunción eréctil: En algunos casos, la atomoxetina puede afectar la libido o la función sexual.
+            """.trimIndent(),
+            "Vortioxetina" to """
+                Náuseas: Es uno de los efectos secundarios más comunes asociados con la vortioxetina. Por lo general, ocurre al principio del tratamiento y tiende a disminuir con el tiempo.
+
+                Diarrea: Algunas personas pueden experimentar diarrea como efecto secundario.
+
+                Insomnio: Problemas para conciliar el sueño o mantenerlo son posibles al inicio del tratamiento.
+
+                Estreñimiento: Algunas personas pueden experimentar estreñimiento como efecto secundario.
+
+                Sudoración aumentada: Aumento de la transpiración puede ocurrir en algunos pacientes.
+
+                Mareos: Sensación de mareo o aturdimiento.
+
+                Problemas sexuales: Puede afectar la función sexual, causando disfunción eréctil o cambios en la libido.
+
+                Aumento de la presión arterial: En algunos casos, se ha observado un aumento de la presión arterial.
+            """.trimIndent(),
+            "Aripiprazol" to """
+                Náuseas: Algunas personas pueden experimentar náuseas al tomar aripiprazol.
+
+                Insomnio o somnolencia: Puede causar dificultades para dormir en algunas personas, mientras que en otras puede causar somnolencia excesiva.
+
+                Aumento de peso: Al igual que con muchos antipsicóticos, el aripiprazol puede llevar a un aumento de peso en algunas personas.
+
+                Agitación o ansiedad: Algunas personas pueden experimentar agitación o ansiedad al tomar este medicamento.
+
+                Temblor: Puede causar temblores en las extremidades.
+
+                Mareos: Sentir vértigo o mareos es otro efecto secundario posible.
+
+                Problemas gastrointestinales: Algunas personas pueden experimentar problemas gastrointestinales, como estreñimiento.
+
+                Problemas en la boca: Puede haber aumento de la salivación o sequedad en la boca.
+
+                Malestar estomacal: Algunas personas pueden experimentar malestar estomacal o indigestión.
+            """.trimIndent(),
+            "Asenapina" to """
+                Somnolencia: Puede causar somnolencia o sedación, por lo que se recomienda precaución al realizar actividades que requieren atención, como conducir, hasta que se sepa cómo afecta individualmente.
+
+                Aumento de peso: Al igual que con algunos otros antipsicóticos, la asenapina puede estar asociada con un aumento de peso.
+
+                Boca seca: Puede causar sequedad en la boca.
+
+                Síntomas extrapiramidales: Estos son efectos secundarios que afectan al sistema motor y pueden incluir temblores, rigidez muscular, movimientos involuntarios y dificultades en la coordinación.
+
+                Sedación: Algunas personas pueden experimentar sedación o sentirse más cansadas de lo habitual.
+
+                Mareos: Sensación de vértigo o mareo.
+
+                Insomnio o dificultades para dormir: En algunos casos, la asenapina puede afectar el patrón de sueño.
+
+                Aumento de los niveles de glucosa en sangre: Se ha observado un aumento en los niveles de glucosa en sangre en algunas personas que toman asenapina.
+
+                Disminución de la presión arterial: Puede causar hipotensión en algunos individuos.
+
+                Aumento de los triglicéridos: En algunos casos, puede haber un aumento en los niveles de triglicéridos en sangre.
+            """.trimIndent(),
+            "Brexpiprazol" to """
+                Insomnio: Algunas personas pueden experimentar dificultades para conciliar el sueño o mantenerlo.
+
+                Somnolencia: Aunque es menos común que el insomnio, algunas personas pueden experimentar somnolencia o sentirse adormiladas.
+
+                Aumento de peso: Se ha observado que algunos pacientes experimentan un aumento de peso mientras toman brexpiprazol.
+
+                Náuseas: Algunas personas pueden sentir náuseas o malestar estomacal.
+
+                Estreñimiento: El brexpiprazol puede causar estreñimiento en algunos pacientes.
+
+                Aumento de los niveles de glucosa en sangre: Puede haber un aumento en los niveles de glucosa en sangre, por lo que es importante controlar regularmente estos niveles en pacientes con riesgo de diabetes.
+
+                Ansiedad: Algunas personas pueden experimentar un aumento de la ansiedad mientras toman brexpiprazol.
+
+                Aumento de los niveles de prolactina: Este medicamento puede elevar los niveles de prolactina, lo que podría llevar a problemas como la galactorrea (producción de leche en las mamas) en algunos casos.
+
+                Aumento de los niveles de colesterol y triglicéridos: El brexpiprazol puede afectar los niveles de lípidos en la sangre, aumentando el colesterol y los triglicéridos en algunos pacientes.
+            """.trimIndent(),
+            "Cariprazina" to """
+                Insomnio: Puede causar dificultades para conciliar el sueño o mantenerlo.
+
+                Somnolencia: Al igual que con otros antipsicóticos, algunas personas pueden experimentar somnolencia o sentirse adormiladas.
+
+                Náuseas: Se ha observado que la cariprazina puede provocar náuseas en algunos pacientes.
+
+                Estreñimiento: Algunas personas pueden experimentar estreñimiento como efecto secundario.
+
+                Aumento de peso: Puede haber un aumento de peso en algunos pacientes que toman cariprazina.
+
+                Aumento de los niveles de glucosa en sangre: Al igual que con otros antipsicóticos, la cariprazina puede afectar los niveles de glucosa en sangre.
+
+                Aumento de los niveles de prolactina: La cariprazina puede aumentar los niveles de prolactina en la sangre, lo que podría llevar a problemas como la galactorrea en algunos casos.
+
+                Ansiedad: Algunas personas pueden experimentar un aumento de la ansiedad como efecto secundario.
+
+                Aumento de los niveles de creatina fosfoquinasa (CPK): Se ha observado un aumento de los niveles de CPK en algunos pacientes que toman cariprazina.
+            """.trimIndent(),
+            "Clotiapina" to """
+                Somnolencia: La clotiapina puede causar somnolencia, por lo que se recomienda precaución al realizar actividades que requieran alerta mental, como conducir o manejar maquinaria pesada.
+
+                Aumento de peso: Al igual que algunos otros antipsicóticos, la clotiapina se ha asociado con el aumento de peso en algunos pacientes.
+
+                Hipotensión ortostática: Puede causar disminución de la presión arterial al ponerse de pie, lo que puede dar lugar a mareos o desmayos, especialmente al principio del tratamiento.
+
+                Estreñimiento: Algunas personas pueden experimentar estreñimiento como efecto secundario.
+
+                Aumento de los niveles de prolactina: La clotiapina puede elevar los niveles de prolactina en la sangre, lo que puede conducir a problemas como la galactorrea.
+
+                Boca seca: La sequedad en la boca es un efecto secundario común asociado con la clotiapina.
+
+                Aumento de la sensibilidad al sol: Algunas personas pueden volverse más sensibles a la luz solar, lo que aumenta el riesgo de quemaduras solares.
+
+                Trastornos del sueño: La clotiapina puede afectar los patrones de sueño y causar insomnio en algunos pacientes.
+
+                Síntomas extrapiramidales: Se ha informado sobre la posibilidad de desarrollar síntomas extrapiramidales, como temblores, rigidez muscular y movimientos involuntarios, aunque esto es menos común con antipsicóticos atípicos como la clotiapina.
+            """.trimIndent(),
+            "Clozapina" to """
+                Sedación o somnolencia: La clozapina puede causar somnolencia, especialmente al principio del tratamiento o al aumentar la dosis.
+
+                Aumento de peso: Muchas personas experimentan un aumento de peso mientras toman clozapina.
+
+                Sialorrea (salivación excesiva): La clozapina puede causar aumento de la producción de saliva, lo que a veces se denomina hipersalivación.
+
+                Estreñimiento: Algunas personas pueden experimentar estreñimiento como efecto secundario de la clozapina.
+
+                Hipotensión ortostática: Puede causar una disminución de la presión arterial al ponerse de pie, lo que puede llevar a mareos o desmayos.
+
+                Taquicardia: Se ha observado un aumento de la frecuencia cardíaca en algunos pacientes que toman clozapina.
+
+                Agranulocitosis: Este es un efecto secundario grave y potencialmente mortal. La clozapina puede causar una reducción significativa en el número de glóbulos blancos, específicamente granulocitos, lo que aumenta el riesgo de infecciones. Los pacientes que toman clozapina deben someterse a pruebas de recuento sanguíneo regularmente para monitorear este riesgo.
+
+                Hipersensibilidad a la glucosa: La clozapina puede afectar el metabolismo de la glucosa y aumentar el riesgo de diabetes.
+
+                Dislipidemia: Puede haber cambios en los niveles de lípidos en sangre, como un aumento en los niveles de colesterol y triglicéridos.
+
+                Síntomas extrapiramidales: Aunque la clozapina tiene menos propensión a causar síntomas extrapiramidales que otros antipsicóticos, aún puede ocurrir temblor, rigidez y otros movimientos involuntarios.
+            """.trimIndent(),
+            "Flupentixol" to """
+                Sedación: Muchas personas experimentan somnolencia o cansancio, especialmente al inicio del tratamiento.
+
+                Hipotensión ortostática: Esto se refiere a una disminución de la presión arterial al ponerse de pie, lo que puede causar mareos o desmayos.
+
+                Aumento de peso: Algunas personas pueden experimentar un aumento de peso como resultado del tratamiento con flupentixol.
+
+                Boca seca: La sequedad bucal es un efecto secundario común de muchos medicamentos psicotrópicos, incluido el flupentixol.
+
+                Estreñimiento: Algunas personas pueden experimentar dificultades para evacuar.
+
+                Trastornos del movimiento: Pueden ocurrir efectos secundarios relacionados con el movimiento, como temblores, rigidez o movimientos involuntarios.
+
+                Aumento de la prolactina: El flupentixol puede elevar los niveles de prolactina, una hormona que regula la lactancia. Esto puede causar efectos secundarios como galactorrea (producción de leche en las mamas) y trastornos menstruales en mujeres.
+
+                Problemas sexuales: Algunas personas pueden experimentar disfunción sexual como resultado del tratamiento.
+            """.trimIndent(),
+            "Fluphenazina" to """
+                Sedación: Puede causar somnolencia o cansancio, especialmente al principio del tratamiento.
+
+                Hipotensión ortostática: Al ponerse de pie, puede experimentarse una disminución de la presión arterial, lo que puede dar lugar a mareos o incluso desmayos.
+
+                Aumento de peso: Algunas personas pueden experimentar un aumento de peso como resultado del tratamiento con flufenazina.
+
+                Boca seca: La sequedad bucal es un efecto secundario común de muchos antipsicóticos, incluida la flufenazina.
+
+                Estreñimiento: Algunas personas pueden experimentar dificultades para evacuar.
+
+                Trastornos del movimiento: Pueden ocurrir efectos secundarios extrapiramidales, como temblores, rigidez muscular o movimientos involuntarios.
+
+                Aumento de la prolactina: La flufenazina puede aumentar los niveles de prolactina, lo que puede causar efectos secundarios como galactorrea (producción de leche en las mamas) y trastornos menstruales en mujeres.
+
+                Problemas sexuales: La disfunción sexual también puede ser un efecto secundario en algunas personas.
+
+                Alteraciones en la función cognitiva: Puede afectar la concentración y la memoria en algunas personas.
+            """.trimIndent(),
+            "Risperidona" to """
+                Sedación: Puede causar somnolencia o fatiga, especialmente al inicio del tratamiento.
+
+                Aumento de peso: Algunas personas pueden experimentar un aumento de peso mientras toman risperidona.
+
+                Mareos: Pueden ocurrir episodios de mareo, especialmente al ponerse de pie rápidamente.
+
+                Hipotensión ortostática: Una disminución de la presión arterial al levantarse, lo que puede provocar mareos o desmayos.
+
+                Boca seca: La sequedad bucal es un efecto secundario común.
+
+                Estreñimiento: Puede causar dificultades para evacuar en algunas personas.
+
+                Aumento de la prolactina: La risperidona puede aumentar los niveles de prolactina, lo que puede causar efectos secundarios como galactorrea (producción de leche en las mamas) y trastornos menstruales en mujeres.
+
+                Trastornos del movimiento: Pueden ocurrir efectos secundarios extrapiramidales, como temblores, rigidez muscular o movimientos involuntarios.
+
+                Disfunción sexual: Algunas personas pueden experimentar problemas sexuales como resultado del tratamiento.
+
+                Alteraciones en los niveles de glucosa: Puede afectar los niveles de glucosa en sangre, por lo que es importante monitorear la glucosa en personas con diabetes.
+
+                Prolongación del intervalo QT: La risperidona puede afectar el intervalo QT en el electrocardiograma, aunque casos graves son raros.
+            """.trimIndent(),
+            "Sertindol" to """
+                Prolongación del intervalo QT: Uno de los efectos secundarios más significativos y específicos de sertindol es la prolongación del intervalo QT en el electrocardiograma. Esto puede aumentar el riesgo de arritmias cardíacas graves. Por esta razón, su uso se asocia con monitoreo regular del electrocardiograma.
+
+                Somnolencia: Al igual que otros antipsicóticos, sertindol puede causar somnolencia o fatiga.
+
+                Hipotensión ortostática: Puede haber una disminución de la presión arterial al ponerse de pie, lo que puede causar mareos o desmayos.
+
+                Aumento de peso: Algunas personas pueden experimentar un aumento de peso durante el tratamiento.
+
+                Mareos: Pueden ocurrir episodios de mareo, especialmente al cambiar de posición rápidamente.
+
+                Boca seca: La sequedad bucal es un efecto secundario común.
+
+                Alteraciones en los niveles de glucosa: Sertindol puede afectar los niveles de glucosa en sangre, por lo que es importante monitorear la glucosa en personas con diabetes.
+
+                Trastornos del movimiento: Pueden ocurrir efectos secundarios extrapiramidales, como temblores, rigidez muscular o movimientos involuntarios.
+
+                Alteraciones en los lípidos: Puede haber cambios en los niveles de lípidos en sangre.
+            """.trimIndent(),
+            "Paliperidona" to """
+                Sedación: Puede causar somnolencia o fatiga, especialmente al principio del tratamiento.
+
+                Aumento de peso: Algunas personas pueden experimentar un aumento de peso durante el tratamiento.
+
+                Mareos: Pueden ocurrir episodios de mareo, especialmente al ponerse de pie rápidamente.
+
+                Hipotensión ortostática: Una disminución de la presión arterial al levantarse, lo que puede provocar mareos o desmayos.
+
+                Molestias gastrointestinales: Pueden incluir náuseas, vómitos o malestar estomacal.
+
+                Boca seca: La sequedad bucal es un efecto secundario común.
+
+                Estreñimiento: Algunas personas pueden experimentar dificultades para evacuar.
+
+                Trastornos del movimiento: Pueden ocurrir efectos secundarios extrapiramidales, como temblores, rigidez muscular o movimientos involuntarios.
+
+                Aumento de la prolactina: La paliperidona puede aumentar los niveles de prolactina, lo que puede causar efectos secundarios como galactorrea (producción de leche en las mamas) y trastornos menstruales en mujeres.
+
+                Disfunción sexual: Algunas personas pueden experimentar problemas sexuales como resultado del tratamiento.
+
+                Insomnio o somnolencia excesiva: Puede afectar el patrón de sueño, causando insomnio en algunas personas o, por el contrario, somnolencia excesiva.
+            """.trimIndent(),
+            "Citalopram" to """
+                Náuseas: Algunas personas pueden experimentar sensación de malestar estomacal o náuseas al tomar citalopram.
+
+                Boca seca: La sequedad bucal es un efecto secundario común de muchos antidepresivos, incluido el citalopram.
+
+                Somnolencia: Puede causar cansancio o somnolencia, especialmente al principio del tratamiento.
+
+                Insomnio: En algunos casos, el citalopram puede interferir con el sueño y causar dificultades para conciliar el sueño.
+
+                Aumento o pérdida de peso: Algunas personas pueden experimentar cambios en el apetito que resultan en aumento o pérdida de peso.
+
+                Sudoración excesiva: El citalopram puede aumentar la sudoración en algunas personas.
+
+                Mareos: Pueden ocurrir episodios de mareo, especialmente al levantarse rápidamente.
+
+                Dolores de cabeza: Algunas personas pueden experimentar dolores de cabeza como efecto secundario.
+
+                Trastornos gastrointestinales: Pueden ocurrir problemas como diarrea o estreñimiento.
+
+                Disminución del deseo sexual o dificultades sexuales: El citalopram, al igual que otros ISRS, puede afectar la libido y la función sexual en algunas personas.
+            """.trimIndent(),
+            "Olanzapina" to """
+                Aumento de peso: La olanzapina está asociada comúnmente con el aumento de peso, que puede ocurrir rápidamente después de comenzar el tratamiento.
+
+                Somnolencia: Puede causar sedación y somnolencia, especialmente al principio del tratamiento.
+
+                Boca seca: La sequedad bucal es un efecto secundario común.
+
+                Estreñimiento: Algunas personas pueden experimentar dificultades para evacuar.
+
+                Aumento de los niveles de glucosa: La olanzapina puede estar asociada con el aumento de los niveles de glucosa en sangre, lo que puede ser relevante para personas con diabetes.
+
+                Trastornos del movimiento: Pueden ocurrir efectos secundarios extrapiramidales, como temblores, rigidez muscular o movimientos involuntarios.
+
+                Hipotensión ortostática: Puede haber una disminución de la presión arterial al ponerse de pie, lo que puede causar mareos o desmayos.
+
+                Mareos: Pueden ocurrir episodios de mareo, especialmente al cambiar de posición rápidamente.
+
+                Aumento de la prolactina: La olanzapina puede aumentar los niveles de prolactina, lo que puede causar efectos secundarios como galactorrea (producción de leche en las mamas) y trastornos menstruales en mujeres.
+
+                Disfunción sexual: Al igual que otros antipsicóticos, la olanzapina puede afectar la libido y la función sexual.
+
+                Alteraciones en los lípidos: Puede haber cambios en los niveles de lípidos en sangre, incluido el colesterol.
+            """.trimIndent(),
+            "Melperona" to """
+                Somnolencia: La melperona puede causar sedación y somnolencia, especialmente al principio del tratamiento.
+
+                Hipotensión ortostática: Puede haber una disminución de la presión arterial al ponerse de pie, lo que puede causar mareos o desmayos.
+
+                Mareos: Pueden ocurrir episodios de mareo, especialmente al cambiar de posición rápidamente.
+
+                Sequedad bucal: La melperona puede causar sequedad en la boca.
+
+                Aumento de peso: Al igual que algunos otros antipsicóticos, la melperona puede estar asociada con el aumento de peso.
+
+                Trastornos gastrointestinales: Pueden ocurrir problemas como estreñimiento.
+
+                Trastornos del movimiento: Pueden ocurrir efectos secundarios extrapiramidales, como temblores, rigidez muscular o movimientos involuntarios.
+
+                Aumento de la prolactina: La melperona puede elevar los niveles de prolactina, lo que puede causar efectos secundarios como galactorrea (producción de leche en las mamas) y trastornos menstruales en mujeres.
+
+                Trastornos del sueño: Puede afectar los patrones de sueño y causar insomnio en algunas personas.
+
+                Alteraciones en la función cognitiva: Algunas personas pueden experimentar dificultades cognitivas, como confusión o problemas de concentración.
+            """.trimIndent(),
+            "Loxapina" to """
+                Somnolencia: Puede causar una sensación de sueño o fatiga, especialmente al principio del tratamiento.
+
+                Mareo: Algunas personas pueden experimentar mareos o vértigo.
+
+                Aumento de peso: Al igual que con muchos antipsicóticos, la loxapina puede estar asociada con ganancia de peso.
+
+                Boca seca: Puede causar sequedad en la boca.
+
+                Estreñimiento: Algunas personas pueden experimentar dificultades para evacuar.
+
+                Visión borrosa: Puede afectar la visión y causar problemas de enfoque.
+
+                Aumento de la prolactina: Puede causar un aumento en los niveles de prolactina, una hormona asociada con la lactancia. Esto puede llevar a efectos secundarios como galactorrea (producción de leche en los pechos), irregularidades menstruales y disminución del deseo sexual.
+
+                Hipotensión ortostática: Puede provocar una disminución de la presión arterial al ponerse de pie, lo que puede causar mareos.
+
+                Aumento de la glucosa en sangre: Puede aumentar los niveles de azúcar en sangre, por lo que las personas con diabetes deben ser monitoreadas de cerca.
+
+                Trastornos extrapiramidales: Puede causar efectos secundarios relacionados con el sistema motor, como temblores, rigidez y movimientos involuntarios.
+            """.trimIndent(),
+            "Levomepromazina" to """
+                Somnolencia: Puede causar una sensación de sueño o fatiga, especialmente al principio del tratamiento.
+
+                Hipotensión ortostática: Puede provocar una disminución de la presión arterial al ponerse de pie, lo que puede causar mareos.
+
+                Taquicardia: Aumento de la frecuencia cardíaca.
+
+                Boca seca: Puede causar sequedad en la boca.
+
+                Visión borrosa: Puede afectar la visión y causar problemas de enfoque.
+
+                Estreñimiento: Algunas personas pueden experimentar dificultades para evacuar.
+
+                Retención urinaria: Puede afectar la capacidad para orinar.
+
+                Aumento de peso: Al igual que con muchos antipsicóticos, la levomepromazina puede estar asociada con ganancia de peso.
+
+                Síndrome neuroléptico maligno (SNM): Aunque es raro, la levomepromazina puede causar SNM, una reacción grave que incluye fiebre, rigidez muscular, confusión y cambios en la presión arterial.
+
+                Disquinesia tardía: En algunos casos, el uso prolongado de antipsicóticos como la levomepromazina puede estar asociado con la aparición de movimientos involuntarios, especialmente en la cara.
+
+                Aumento de la prolactina: Al igual que con otros antipsicóticos, la levomepromazina puede aumentar los niveles de prolactina, lo que puede llevar a efectos secundarios como galactorrea (producción de leche en los pechos), irregularidades menstruales y disminución del deseo sexual.
+            """.trimIndent(),
+            "Levosulpirida" to """
+                Trastornos gastrointestinales: Puede causar efectos secundarios relacionados con el sistema digestivo, como náuseas, vómitos, indigestión y malestar abdominal.
+
+                Aumento de la prolactina: Al igual que otros antipsicóticos, la levosulpirida puede aumentar los niveles de prolactina en sangre, lo que puede llevar a efectos secundarios como galactorrea (producción de leche en los pechos), irregularidades menstruales y disminución del deseo sexual.
+
+                Sedación o somnolencia: Puede causar una sensación de sueño o fatiga, especialmente al principio del tratamiento.
+
+                Aumento de peso: Algunas personas pueden experimentar ganancia de peso como efecto secundario.
+
+                Mareos: Puede provocar mareos o vértigo.
+
+                Hipotensión ortostática: Puede causar una disminución de la presión arterial al ponerse de pie, lo que puede dar lugar a mareos.
+
+                Aumento de la transaminasa hepática: En algunos casos, puede haber elevaciones en las enzimas hepáticas.
+
+                Agitación o inquietud: Algunas personas pueden experimentar agitación o inquietud como efecto secundario.
+            """.trimIndent(),
+            "Trifluoperazina" to """
+                Sedación o somnolencia: La trifluoperazina puede causar una sensación de sueño o fatiga, especialmente al principio del tratamiento.
+
+                Hipotensión ortostática: Puede provocar una disminución de la presión arterial al ponerse de pie, lo que puede dar lugar a mareos.
+
+                Mareos o vértigo: Algunas personas pueden experimentar mareos o sensación de girar.
+
+                Boca seca: La trifluoperazina puede causar sequedad en la boca.
+
+                Estreñimiento: Puede haber dificultades para evacuar.
+
+                Visión borrosa: Puede afectar la visión y causar problemas de enfoque.
+
+                Aumento de peso: Al igual que con muchos antipsicóticos, la trifluoperazina puede estar asociada con ganancia de peso.
+
+                Aumento de la prolactina: Puede elevar los niveles de prolactina en sangre, lo que puede llevar a efectos secundarios como galactorrea (producción de leche en los pechos), irregularidades menstruales y disminución del deseo sexual.
+
+                Temblor o movimientos involuntarios: Puede provocar temblores o movimientos involuntarios, especialmente a dosis más altas.
+
+                Síndrome neuroléptico maligno (SNM): Aunque es raro, la trifluoperazina puede desencadenar SNM, una reacción grave que incluye fiebre, rigidez muscular, confusión y cambios en la presión arterial.
+            """.trimIndent(),
+            "Amoxapina" to """
+                Sedación: Puede causar somnolencia o fatiga, especialmente al principio del tratamiento.
+
+                Boca seca: La amoxapina puede reducir la producción de saliva, lo que resulta en sequedad bucal.
+
+                Estreñimiento: Algunas personas pueden experimentar dificultades para evacuar.
+
+                Visión borrosa: Puede afectar la visión y causar problemas de enfoque.
+
+                Ortostatismo: Puede provocar hipotensión ortostática, es decir, una disminución de la presión arterial al ponerse de pie, lo que puede causar mareos o desmayos.
+
+                Retención urinaria: Puede afectar la capacidad para orinar.
+
+                Aumento de peso: Al igual que algunos otros antidepresivos tricíclicos, la amoxapina puede estar asociada con ganancia de peso.
+
+                Temblor: Algunas personas pueden experimentar temblores como efecto secundario.
+
+                Trastornos del sueño: Puede causar insomnio o alteraciones en los patrones de sueño.
+
+                Aumento de la sudoración: Puede provocar sudoración excesiva.
+            """.trimIndent(),
+            "Oxitriptán(5-HTP)" to """
+                Malestar gastrointestinal: Puede causar náuseas, vómitos o dolor abdominal en algunos casos.
+
+                Insomnio: Algunas personas experimentan dificultades para conciliar el sueño o mantenerse dormidas después de tomar 5-HTP.
+
+                Sensación de somnolencia: Aunque el insomnio es un efecto secundario posible, algunas personas experimentan somnolencia excesiva durante el día.
+
+                Dolor muscular: Algunas personas informan de dolor muscular o sensibilidad después de tomar 5-HTP.
+
+                Mareos: Puede causar mareos o una sensación de desequilibrio en algunas personas.
+
+                Aumento de la frecuencia cardíaca: En algunos casos, el 5-HTP puede llevar a un aumento en la frecuencia cardíaca.
+
+                Síndrome serotoninérgico: Aunque raro, el uso excesivo de 5-HTP puede contribuir al síndrome serotoninérgico, que es una condición potencialmente grave asociada con un exceso de serotonina en el cuerpo. Los síntomas pueden incluir confusión, agitación, fiebre, sudoración, aumento de la frecuencia cardíaca, espasmos musculares y otros.
+            """.trimIndent(),
+            "Trazodona" to """
+                Somnolencia: La trazodona es conocida por su capacidad para inducir somnolencia, y a menudo se prescribe en dosis más bajas como ayuda para dormir.
+
+                Boca seca: La sequedad en la boca es un efecto secundario común de la trazodona.
+
+                Mareos: Algunas personas pueden experimentar mareos o sentirse aturdidas al tomar trazodona.
+
+                Visión borrosa: La trazodona puede afectar la visión y causar visión borrosa en algunas personas.
+
+                Estreñimiento o diarrea: Problemas gastrointestinales como estreñimiento o diarrea son efectos secundarios posibles.
+
+                Aumento de peso: Algunas personas pueden experimentar un aumento de peso como resultado del uso de trazodona.
+
+                Náuseas o malestar estomacal: Algunas personas pueden experimentar náuseas o malestar estomacal al tomar este medicamento.
+
+                Cambio en la libido: La trazodona puede afectar la función sexual y, en algunos casos, causar cambios en la libido.
+
+                Sudoración excesiva: La trazodona puede llevar a sudoración excesiva, especialmente durante la noche.
+
+                Confusión en personas mayores: En adultos mayores, la trazodona puede aumentar el riesgo de confusión.
+            """.trimIndent(),
+            "Vilazodona" to """
+                Náuseas: La náusea es uno de los efectos secundarios más comunes de la vilazodona. Puede ayudar tomar el medicamento con alimentos para reducir este efecto.
+
+                Diarrea: Algunas personas pueden experimentar diarrea como efecto secundario de la vilazodona.
+
+                Insomnio o somnolencia: Puede afectar el patrón del sueño, y algunas personas pueden experimentar insomnio o, por el contrario, sentirse somnolientas.
+
+                Mareos: La vilazodona puede causar mareos en algunas personas.
+
+                Boca seca: La sequedad en la boca es otro efecto secundario posible.
+
+                Estreñimiento: Al igual que la diarrea, el estreñimiento también puede ser un efecto secundario gastrointestinal.
+
+                Aumento de la sudoración: Algunas personas pueden experimentar un aumento en la sudoración al tomar vilazodona.
+
+                Problemas sexuales: Puede afectar la función sexual, como disminución del deseo sexual o dificultades en la erección o la eyaculación.
+
+                Dolor de cabeza: Algunas personas pueden experimentar dolores de cabeza como efecto secundario.
+
+                Temblor: En algunos casos, la vilazodona puede causar temblores leves.
+            """.trimIndent(),
+            "Lisdexanfetamina" to """
+                Insomnio: Puede causar dificultades para conciliar el sueño o mantenerse dormido, especialmente si se toma en horas cercanas al momento de acostarse.
+
+                Pérdida del apetito: La lisdexanfetamina puede disminuir el apetito, lo que puede llevar a la pérdida de peso.
+
+                Náuseas: Algunas personas pueden experimentar náuseas como efecto secundario.
+
+                Dolor abdominal: Se ha informado dolor abdominal en algunos casos.
+
+                Boca seca: La sequedad en la boca es un efecto secundario común de los estimulantes como la lisdexanfetamina.
+
+                Aumento de la presión arterial y frecuencia cardíaca: Este medicamento puede aumentar la presión arterial y la frecuencia cardíaca, por lo que es importante monitorear estos parámetros durante el tratamiento.
+
+                Irritabilidad o ansiedad: Algunas personas pueden experimentar irritabilidad o ansiedad como efecto secundario.
+
+                Sudoración excesiva: La lisdexanfetamina puede aumentar la sudoración en algunas personas.
+
+                Mareos: Se ha informado de casos de mareos en usuarios de lisdexanfetamina.
+
+                Cambios en el estado de ánimo: Puede afectar el estado de ánimo y, en algunos casos, aumentar el riesgo de cambios en el estado de ánimo, incluida la exacerbación de la depresión.
+            """.trimIndent(),
+            "Maprotilina" to """
+                Sedación: La maprotilina puede causar somnolencia o sedación, por lo que a menudo se administra en la noche para minimizar este efecto.
+
+                Boca seca: La sequedad en la boca es un efecto secundario común de los antidepresivos tricíclicos, incluida la maprotilina.
+
+                Estreñimiento: Algunas personas pueden experimentar estreñimiento mientras toman maprotilina.
+
+                Aumento de peso: Puede estar asociada con ganancia de peso en algunas personas.
+
+                Visión borrosa: La maprotilina puede afectar la visión y causar visión borrosa en algunos casos.
+
+                Orinar con dificultad: Puede causar dificultades para orinar o retención urinaria en algunas personas.
+
+                Mareos: Algunas personas pueden experimentar mareos al ponerse de pie o cambiar de posición.
+
+                Taquicardia: Puede aumentar la frecuencia cardíaca en algunas personas.
+
+                Sudoración excesiva: La maprotilina puede causar sudoración excesiva, especialmente durante la noche.
+
+                Náuseas y vómitos: Algunas personas pueden experimentar náuseas o vómitos como efecto secundario.
+
+                Temblor: En algunos casos, la maprotilina puede causar temblores finos en las manos.
+            """.trimIndent(),
+            "Mianserina" to """
+                Sedación: La mianserina a menudo está asociada con sedación o somnolencia, por lo que generalmente se toma antes de acostarse.
+
+                Aumento de peso: Puede estar relacionada con un aumento de peso en algunas personas.
+
+                Boca seca: La sequedad en la boca es un efecto secundario común de muchos antidepresivos, incluida la mianserina.
+
+                Estreñimiento: Al igual que con otros antidepresivos, la mianserina puede causar estreñimiento en algunas personas.
+
+                Mareos: Algunas personas pueden experimentar mareos al tomar mianserina.
+
+                Visión borrosa: La mianserina puede afectar la visión y causar visión borrosa en algunos casos.
+
+                Náuseas: Puede provocar náuseas en algunas personas.
+
+                Aumento de la sudoración: La mianserina puede causar un aumento en la sudoración.
+
+                Confusión en personas mayores: En adultos mayores, la mianserina puede aumentar el riesgo de confusión.
+
+                Hipotensión ortostática: Puede provocar una disminución de la presión arterial al ponerse de pie, lo que puede causar mareos o incluso desmayos.
+
+                Problemas sexuales: Como con muchos antidepresivos, la mianserina puede afectar la función sexual.
+            """.trimIndent(),
+            "Mirtazapina" to """
+                Sedación: La mirtazapina es conocida por causar sedación, y a menudo se prescribe en dosis más bajas antes de dormir para ayudar a mejorar el sueño.
+
+                Aumento de peso: Puede estar asociada con un aumento de peso en algunas personas.
+
+                Boca seca: La sequedad en la boca es un efecto secundario común de la mirtazapina.
+
+                Somnolencia durante el día: Algunas personas pueden experimentar somnolencia durante el día después de tomar mirtazapina.
+
+                Aumento del apetito: Puede aumentar el apetito en algunas personas.
+
+                Estreñimiento: Al igual que con otros antidepresivos, la mirtazapina puede causar estreñimiento en algunas personas.
+
+                Mareos: Se ha informado de mareos en algunos casos.
+
+                Visión borrosa: La mirtazapina puede afectar la visión y causar visión borrosa en algunos casos.
+
+                Baja presión arterial al ponerse de pie: Puede causar una disminución de la presión arterial al ponerse de pie, lo que se conoce como hipotensión ortostática.
+
+                Problemas sexuales: Como con muchos antidepresivos, la mirtazapina puede afectar la función sexual.
+
+                Confusión en personas mayores: En adultos mayores, la mirtazapina puede aumentar el riesgo de confusión.
+            """.trimIndent(),
+            "Nefazodona" to """
+                Náuseas: Puede causar molestias gástricas, incluyendo náuseas, en algunas personas.
+
+                Vértigo o mareos: Se han informado mareos o vértigo como efectos secundarios en algunos usuarios de nefazodona.
+
+                Estreñimiento: Puede causar estreñimiento en algunas personas.
+
+                Visión borrosa: Alteraciones visuales, como visión borrosa, han sido reportadas.
+
+                Sedación: La nefazodona puede causar somnolencia o sedación en algunas personas.
+
+                Insomnio: Aunque puede causar somnolencia en algunos, también puede contribuir a problemas de insomnio en otros.
+
+                Sequedad en la boca: La nefazodona puede estar asociada con sequedad en la boca.
+
+                Disfunción sexual: Como muchos antidepresivos, la nefazodona puede afectar la función sexual, incluyendo la libido y la capacidad de alcanzar o mantener una erección.
+
+                Aumento de peso: Al igual que algunos otros antidepresivos, la nefazodona puede estar asociada con un aumento de peso en algunas personas.
+
+                Hepatotoxicidad: Aunque no es un efecto secundario menor, la hepatotoxicidad es una preocupación importante asociada con la nefazodona y fue una de las razones para su retirada del mercado en algunos lugares.
+            """.trimIndent(),
+            "Reboxetina" to """
+                Insomnio: Algunas personas pueden experimentar dificultades para conciliar el sueño o mantenerse dormidas.
+
+                Sedación: Aunque menos común que el insomnio, algunas personas pueden experimentar somnolencia o sedación.
+
+                Náuseas: La reboxetina puede causar malestar estomacal y náuseas en algunas personas.
+
+                Estreñimiento: El estreñimiento es otro efecto secundario gastrointestinal posible.
+
+                Boca seca: La sequedad en la boca es un efecto secundario común de los inhibidores selectivos de la recaptación de norepinefrina, incluida la reboxetina.
+
+                Aumento de la presión arterial y la frecuencia cardíaca: Puede aumentar la presión arterial y la frecuencia cardíaca en algunas personas.
+
+                Mareos: Se ha informado de mareos en algunos usuarios de reboxetina.
+
+                Sudoración excesiva: La reboxetina puede aumentar la sudoración en algunas personas.
+
+                Problemas sexuales: Como con muchos antidepresivos, la reboxetina puede afectar la función sexual, incluyendo la libido y la función eréctil.
+
+                Pérdida de apetito: Algunas personas pueden experimentar una disminución del apetito.
+            """.trimIndent(),
+            "Amitriptilina" to """
+                Sedación: La amitriptilina puede causar somnolencia, por lo que se suele tomar por la noche para minimizar este efecto.
+
+                Boca seca: Este es un efecto secundario frecuente y puede aliviarse bebiendo agua o chupando caramelos sin azúcar.
+
+                Visión borrosa: Algunas personas pueden experimentar visión borrosa o problemas para enfocar debido a la dilatación de las pupilas.
+
+                Estreñimiento: La amitriptilina puede afectar la función intestinal y causar estreñimiento en algunas personas.
+
+                Aumento de peso: Algunas personas pueden experimentar un aumento de peso mientras toman amitriptilina.
+
+                Latidos cardíacos irregulares: La amitriptilina puede afectar el ritmo cardíaco en algunos casos.
+
+                Retención urinaria: Puede haber dificultades para orinar en algunas personas.
+
+                Baja presión arterial al ponerse de pie: Esto puede causar mareos o desmayos al levantarse rápidamente.
+
+                Sudoración excesiva: Algunas personas pueden experimentar aumento de la sudoración.
+
+                Náuseas y malestar estomacal: Pueden ocurrir problemas gastrointestinales en algunas personas.
+            """.trimIndent(),
+            "Bupropión" to """
+                Insomnio: El bupropión puede causar dificultades para conciliar el sueño o mantenerlo, especialmente si se toma cerca de la hora de acostarse. A veces, el médico puede recomendar tomar la dosis por la mañana para minimizar este efecto.
+
+                Boca seca: La sequedad bucal es un efecto secundario común.
+
+                Dolor de cabeza: Algunas personas pueden experimentar dolores de cabeza como resultado del uso de bupropión.
+
+                Náuseas: Puede haber malestar estomacal o náuseas, especialmente al principio del tratamiento.
+
+                Cambios en el apetito: Puede haber aumento o pérdida del apetito.
+
+                Temblor: En algunos casos, las personas pueden experimentar temblores, especialmente en las manos.
+
+                Aumento de la sudoración: El bupropión puede causar sudoración excesiva en algunas personas.
+
+                Mareos: Algunas personas pueden sentirse mareadas o experimentar vértigo.
+
+                Estreñimiento o diarrea: Puede haber cambios en los hábitos intestinales.
+
+                Aumento de la frecuencia cardíaca: El bupropión puede tener efectos sobre el ritmo cardíaco en algunas personas.
+
+                Aumento de la presión arterial: En algunos casos, se ha observado un aumento de la presión arterial.
+            """.trimIndent(),
+            "Desipramina" to """
+                Boca seca: La desipramina puede causar sequedad en la boca.
+
+                Estreñimiento: Puede haber una disminución de la frecuencia de las evacuaciones intestinales.
+
+                Visión borrosa: Algunas personas pueden experimentar visión borrosa o problemas de enfoque.
+
+                Mareos o vértigo: Pueden ocurrir episodios de mareo, especialmente al ponerse de pie rápidamente.
+
+                Somnolencia o insomnio: La desipramina puede afectar los patrones de sueño, causando somnolencia en algunos casos y dificultades para dormir en otros.
+
+                Aumento de peso: Al igual que algunos otros antidepresivos, la desipramina puede estar asociada con el aumento de peso en algunas personas.
+
+                Aumento del ritmo cardíaco: Puede haber un aumento en la frecuencia cardíaca o cambios en el ritmo cardíaco.
+
+                Presión arterial baja al ponerse de pie: Esto puede causar mareos o desmayos al levantarse rápidamente.
+
+                Náuseas o malestar estomacal: Algunas personas pueden experimentar molestias gastrointestinales.
+
+                Sudoración excesiva: La desipramina puede causar aumento de la sudoración.
+
+                Problemas sexuales: Pueden surgir disfunciones sexuales, como la disminución del deseo sexual o la dificultad para alcanzar el orgasmo.
+            """.trimIndent(),
+            "Doxepina" to """
+                Somnolencia: La doxepina puede causar somnolencia, y generalmente se prescribe en dosis más bajas para ayudar a mejorar el sueño en pacientes con insomnio.
+
+                Mareos: Algunas personas pueden experimentar mareos, especialmente al ponerse de pie rápidamente.
+
+                Boca seca: La doxepina puede provocar sequedad en la boca.
+
+                Estreñimiento: Puede haber una disminución de la frecuencia de las evacuaciones intestinales.
+
+                Visión borrosa: Al igual que con otros antidepresivos tricíclicos, la doxepina puede afectar la visión y causar problemas de enfoque.
+
+                Aumento de peso: Algunas personas pueden experimentar aumento de peso como efecto secundario.
+
+                Retención urinaria: En algunas personas, la doxepina puede dificultar la micción.
+
+                Problemas sexuales: Pueden surgir disfunciones sexuales, como la disminución del deseo sexual o la dificultad para alcanzar el orgasmo.
+
+                Latidos cardíacos irregulares: La doxepina puede afectar el ritmo cardíaco en algunos casos.
+
+                Sudoración excesiva: Puede haber un aumento de la sudoración.
+            """.trimIndent(),
+            "Imipramina" to """
+                Somnolencia: La imipramina puede causar sedación, y se suele tomar por la noche para minimizar este efecto.
+
+                Mareos: Algunas personas pueden experimentar mareos, especialmente al levantarse rápidamente.
+
+                Boca seca: La imipramina puede provocar sequedad en la boca.
+
+                Visión borrosa: Al igual que otros antidepresivos tricíclicos, la imipramina puede afectar la visión y causar problemas de enfoque.
+
+                Estreñimiento: Puede haber una disminución de la frecuencia de las evacuaciones intestinales.
+
+                Aumento de peso: Al igual que con algunos otros antidepresivos, la imipramina puede estar asociada con el aumento de peso en algunas personas.
+
+                Retención urinaria: En algunas personas, la imipramina puede dificultar la micción.
+
+                Problemas sexuales: Pueden surgir disfunciones sexuales, como la disminución del deseo sexual o la dificultad para alcanzar el orgasmo.
+
+                Latidos cardíacos irregulares: La imipramina puede afectar el ritmo cardíaco en algunos casos.
+
+                Sudoración excesiva: Puede haber un aumento de la sudoración.
+
+                Náuseas y malestar estomacal: Algunas personas pueden experimentar molestias gastrointestinales.
+            """.trimIndent(),
+            "Nortriptilina" to """
+                Somnolencia: La nortriptilina puede causar sedación, y a menudo se toma por la noche para minimizar este efecto.
+
+                Mareos: Algunas personas pueden experimentar mareos, especialmente al levantarse rápidamente.
+
+                Boca seca: La nortriptilina puede provocar sequedad en la boca.
+
+                Estreñimiento: Puede haber una disminución de la frecuencia de las evacuaciones intestinales.
+
+                Aumento de peso: Al igual que con algunos otros antidepresivos, la nortriptilina puede estar asociada con el aumento de peso en algunas personas.
+
+                Visión borrosa: Puede haber problemas de enfoque y visión borrosa.
+
+                Retención urinaria: En algunas personas, la nortriptilina puede dificultar la micción.
+
+                Problemas sexuales: Pueden surgir disfunciones sexuales, como la disminución del deseo sexual o la dificultad para alcanzar el orgasmo.
+
+                Latidos cardíacos irregulares: La nortriptilina puede afectar el ritmo cardíaco en algunos casos.
+
+                Sudoración excesiva: Puede haber un aumento de la sudoración.
+
+                Náuseas y malestar estomacal: Algunas personas pueden experimentar molestias gastrointestinales.
+            """.trimIndent(),
+            "Trimipramina" to """
+                Somnolencia: La trimipramina puede causar sedación, y a menudo se toma por la noche para minimizar este efecto.
+
+                Mareos: Algunas personas pueden experimentar mareos, especialmente al levantarse rápidamente.
+
+                Boca seca: La trimipramina puede provocar sequedad en la boca.
+
+                Estreñimiento: Puede haber una disminución de la frecuencia de las evacuaciones intestinales.
+
+                Aumento de peso: Al igual que con algunos otros antidepresivos, la trimipramina puede estar asociada con el aumento de peso en algunas personas.
+
+                Visión borrosa: Puede haber problemas de enfoque y visión borrosa.
+
+                Retención urinaria: En algunas personas, la trimipramina puede dificultar la micción.
+
+                Problemas sexuales: Pueden surgir disfunciones sexuales, como la disminución del deseo sexual o la dificultad para alcanzar el orgasmo.
+
+                Latidos cardíacos irregulares: La trimipramina puede afectar el ritmo cardíaco en algunos casos.
+
+                Sudoración excesiva: Puede haber un aumento de la sudoración.
+
+                Náuseas y malestar estomacal: Algunas personas pueden experimentar molestias gastrointestinales.
+
+                Confusión o problemas cognitivos: En algunos casos, la trimipramina puede causar confusión o problemas de memoria.
+            """.trimIndent(),
+            "Venlafaxina" to """
+                Náuseas: La venlafaxina puede causar sensación de náuseas en algunas personas, especialmente al principio del tratamiento.
+
+                Insomnio o somnolencia: Puede haber dificultades para conciliar el sueño o, en algunos casos, somnolencia excesiva.
+
+                Boca seca: La venlafaxina puede causar sequedad en la boca.
+
+                Estreñimiento o problemas gastrointestinales: Algunas personas pueden experimentar estreñimiento u otros problemas gastrointestinales.
+
+                Pérdida de apetito o aumento de peso: La venlafaxina puede afectar el apetito, y algunas personas pueden experimentar pérdida de apetito, mientras que otras pueden experimentar aumento de peso.
+
+                Sudoración excesiva: Puede haber un aumento de la sudoración, especialmente por las noches.
+
+                Dificultades sexuales: Pueden surgir problemas sexuales, como la disminución del deseo sexual, la dificultad para alcanzar el orgasmo o la disfunción eréctil.
+
+                Aumento de la presión arterial: En algunos casos, la venlafaxina puede elevar la presión arterial.
+
+                Mareos o vértigo: Algunas personas pueden experimentar mareos o sensación de vértigo.
+
+                Dolor de cabeza: Los dolores de cabeza son un efecto secundario común.
+
+                Agitación o nerviosismo: Puede haber un aumento de la agitación o la ansiedad en algunas personas.
+
+                Problemas con la memoria o la concentración: Algunas personas pueden experimentar dificultades con la memoria o la concentración.
+            """.trimIndent(),
+            "Agomelatina" to """
+                Dolor de cabeza: Algunas personas pueden experimentar dolores de cabeza durante el tratamiento con agomelatina.
+
+                Somnolencia o cansancio: La agomelatina puede causar somnolencia o una sensación general de cansancio, por lo que se suele tomar por la noche.
+
+                Insomnio: Aunque es menos común en comparación con otros antidepresivos, algunas personas pueden experimentar dificultades para conciliar el sueño.
+
+                Problemas gastrointestinales: Pueden ocurrir problemas como náuseas, diarrea o malestar estomacal.
+
+                Mareos: Algunas personas pueden experimentar mareos o vértigo.
+
+                Aumento de peso: Aunque la agomelatina generalmente tiene menos efecto sobre el peso en comparación con algunos otros antidepresivos, algunas personas pueden experimentar un aumento de peso.
+
+                Dolor en la espalda o las extremidades: Se han informado casos de dolor musculoesquelético asociado con la agomelatina.
+
+                Aumento de las enzimas hepáticas: En algunos casos, la agomelatina puede afectar las pruebas de función hepática.
+            """.trimIndent(),
+            "Agomelatina" to """
+                Dolor de cabeza: Algunas personas pueden experimentar dolores de cabeza durante el tratamiento con agomelatina.
+
+                Somnolencia o cansancio: La agomelatina puede causar somnolencia o una sensación general de cansancio, por lo que se suele tomar por la noche.
+
+                Insomnio: Aunque es menos común en comparación con otros antidepresivos, algunas personas pueden experimentar dificultades para conciliar el sueño.
+
+                Problemas gastrointestinales: Pueden ocurrir problemas como náuseas, diarrea o malestar estomacal.
+
+                Mareos: Algunas personas pueden experimentar mareos o vértigo.
+
+                Aumento de peso: Aunque la agomelatina generalmente tiene menos efecto sobre el peso en comparación con algunos otros antidepresivos, algunas personas pueden experimentar un aumento de peso.
+
+                Dolor en la espalda o las extremidades: Se han informado casos de dolor musculoesquelético asociado con la agomelatina.
+
+                Aumento de las enzimas hepáticas: En algunos casos, la agomelatina puede afectar las pruebas de función hepática.
+            """.trimIndent(),
+            "Milnaciprán" to """
+                Náuseas: Algunas personas pueden experimentar náuseas como efecto secundario del milnaciprán.
+
+                Dolor de cabeza: Los dolores de cabeza son otro efecto secundario común.
+
+                Estreñimiento o diarrea: Algunas personas pueden experimentar cambios en los hábitos intestinales.
+
+                Insomnio o somnolencia: El milnaciprán puede afectar los patrones de sueño, ya sea causando insomnio en algunas personas o somnolencia en otras.
+
+                Aumento de la sudoración: Algunas personas pueden experimentar un aumento en la transpiración.
+
+                Boca seca: La sequedad bucal es otro efecto secundario posible.
+
+                Aumento de la frecuencia cardíaca: En algunos casos, se ha observado un aumento en la frecuencia cardíaca.
+
+                Presión arterial elevada: Puede haber un aumento en la presión arterial en algunas personas.
+
+                Mareos: Algunas personas pueden experimentar mareos o vértigo.
+
+                Cambios en el apetito: Puede haber cambios en el apetito, como pérdida o aumento de peso.
+            """.trimIndent(),
+            "Clorazepato" to """
+                Somnolencia: La somnolencia es un efecto secundario común de las benzodiazepinas, incluido el clorazepato.
+
+                Mareos: Puedes experimentar sensación de mareo o aturdimiento.
+
+                Dificultades de coordinación: Algunas personas pueden experimentar problemas de coordinación motora.
+
+                Confusión: La confusión mental es un efecto secundario posible, especialmente en personas sensibles o mayores.
+
+                Dolor de cabeza: Al igual que con muchos medicamentos, el clorazepato puede causar dolores de cabeza.
+
+                Boca seca: Puedes experimentar sequedad en la boca como efecto secundario.
+
+                Problemas gastrointestinales: Esto puede incluir náuseas o estreñimiento en algunos casos.
+
+                Cambios en la libido: Algunas personas pueden experimentar cambios en la libido o la función sexual.
+
+                Retención de líquidos: Puedes experimentar retención de líquidos y edema en algunas partes del cuerpo.
+
+                Aumento de peso: En algunos casos, el uso de clorazepato puede estar asociado con un aumento de peso.
+            """.trimIndent()
 
 
 
