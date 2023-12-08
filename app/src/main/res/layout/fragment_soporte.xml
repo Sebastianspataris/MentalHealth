@@ -1,7 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="20dp"
     tools:context=".SoporteFragment"
-    android:background="@color/yellow"/>
+    android:background="@color/greenlight">
+
+    <TextView
+        android:id="@+id/infoTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="25sp"
+        android:layout_marginTop="16dp"
+        />
+    <TextView
+        android:id="@+id/correoTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/infoTextView"
+        android:text=""
+        android:textSize="20sp"
+        android:layout_marginTop="8dp"
+        />
+
+    <TextView
+        android:id="@+id/telefonoTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/correoTextView"
+        android:text=""
+        android:textSize="20sp"
+        android:layout_marginTop="8dp"
+        />
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_below="@id/telefonoTextView"
+        android:src="@drawable/logo"
+        android:layout_centerHorizontal="true"
+        android:visibility="visible"
+        android:background="@drawable/circular_background"
+        android:layout_marginTop="8dp"/>
+
+</RelativeLayout>
