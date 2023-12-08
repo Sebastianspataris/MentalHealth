@@ -2,15 +2,28 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:background="#A9E0E8">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:src="@drawable/logo"
+        android:layout_centerHorizontal="true"
+        android:visibility="visible"
+        android:background="@drawable/circular_background"/>
 
     <TextView
         android:id="@+id/usernameTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@id/imageView"
         android:layout_centerHorizontal="true"
         android:text=""
-        android:layout_marginTop="16dp"/>
+        android:textSize="18sp"
+        android:layout_marginTop="20dp"
+        android:background="#ffffff"/>
 
     <TextView
         android:id="@+id/firstNameTextView"
@@ -19,7 +32,9 @@
         android:layout_below="@id/usernameTextView"
         android:layout_centerHorizontal="true"
         android:text=""
-        android:layout_marginTop="8dp"/>
+        android:textSize="18sp"
+        android:layout_marginTop="16dp"
+        android:background="#ffffff"/>
 
     <TextView
         android:id="@+id/lastNameTextView"
@@ -28,7 +43,9 @@
         android:layout_below="@id/firstNameTextView"
         android:layout_centerHorizontal="true"
         android:text=""
-        android:layout_marginTop="8dp"/>
+        android:textSize="18sp"
+        android:layout_marginTop="16dp"
+        android:background="#ffffff"/>
 
     <TextView
         android:id="@+id/diagTextView"
@@ -37,7 +54,9 @@
         android:layout_below="@id/lastNameTextView"
         android:layout_centerHorizontal="true"
         android:text=""
-        android:layout_marginTop="8dp"/>
+        android:textSize="18sp"
+        android:layout_marginTop="16dp"
+        android:background="#ffffff"/>
 
     <TextView
         android:id="@+id/dobTextView"
@@ -46,14 +65,42 @@
         android:layout_below="@id/diagTextView"
         android:layout_centerHorizontal="true"
         android:text=""
-        android:layout_marginTop="8dp"/>
+        android:textSize="18sp"
+        android:layout_marginTop="16dp"
+        android:background="#ffffff"/>
 
     <TextView
-        android:id="@+id/passwordTextView"
+        android:id="@+id/passwordLabelTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/dobTextView"
         android:layout_centerHorizontal="true"
+        android:text="Contraseña:"
+        android:textSize="18sp"
+        android:layout_marginTop="16dp"
+        android:background="#ffffff"/>
+
+    <EditText
+        android:id="@+id/passwordEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dobTextView"
+        android:layout_toEndOf="@id/passwordLabelTextView"
+        android:layout_centerHorizontal="true"
         android:text=""
-        android:layout_marginTop="8dp"/>
+        android:textSize="18sp"
+        android:layout_marginTop="16dp"
+        android:background="#ffffff"
+        android:inputType="none"
+        android:cursorVisible="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"/>
+
+    <Button
+        android:id="@+id/togglePasswordButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mostrar contraseña"
+        android:layout_marginTop="8dp"
+        android:layout_below="@id/passwordEditText"/>
 </RelativeLayout>
